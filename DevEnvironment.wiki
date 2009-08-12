@@ -3,7 +3,7 @@
 = Introduction =
 
   * [DevEnvironment#Vocrecaptorswing Vocrecaptorswing project]
-  * [DevEnvironment#Vocrecaptorfx Vocrecaptorfxproject]
+  * [DevEnvironment#Vocrecaptorfx Vocrecaptorfx project]
   * [DevEnvironment#Vocrecaptorgwt Vocrecaptorgwt project]
 
 
