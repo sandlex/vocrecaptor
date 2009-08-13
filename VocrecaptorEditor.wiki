@@ -61,7 +61,7 @@ If dictionary file is not set the notification window will appear:
 
 http://vocrecaptor.com/images/en/v2.1/dictionaryisnotset.jpg
 
-In this case you have to open the `Program manager` and specify a dictionary file ([#openstorage see]). If dictionary file was set correctly the `Editor` window will appear:
+In this case you have to open the `Program manager` and specify a dictionary file ([#Opening_an_existing_storage see]). If dictionary file was set correctly the `Editor` window will appear:
 
 http://vocrecaptor.com/images/en/v2.1/editor.jpg
 
@@ -128,7 +128,7 @@ http://vocrecaptor.com/images/en/v2.1/startwordsrecap.jpg
 http://vocrecaptor.com/images/en/v2.1/recapwindowinitially.jpg
 
 === Setting recap list ===
-As you can see from the message in this window to start recaping you should specify the word list. Switch back to the `Program manager` window and press `Set for recap` button ([#viewrecapwordslist see]). The `Recap` window will start periodically display the words from the list: firstly definition, secondly translation and then example of usage if it exists.
+As you can see from the message in this window to start recaping you should specify the word list. Switch back to the `Program manager` window and press `Set for recap` button ([#Previewing_the_word_list see]). The `Recap` window will start periodically display the words from the list: firstly definition, secondly translation and then example of usage if it exists.
 
 http://vocrecaptor.com/images/en/v2.1/wordsrecaping.jpg
 
@@ -140,7 +140,7 @@ http://vocrecaptor.com/images/en/v2.1/recapmanager.jpg
 Here you can choose display periods for each of these items. If you want to recap the words in reverse order (translation appears before definition) - set `Show definition and translation in reverse order` checkbox. If you want to display words in random order you can do it here as well.
 
 === Exporting recap list to a file ===
-The `Program manager` allows to export currently recaping word list to file (for printing). To do this switch to the `Words manager` tab of the `Program manager` and press `Export list...` ([#viewrecapwordslist see]). Note, that the `Export list...` button is enabled only if recap list is set ([#settingrecaplist see]). Press this button and enter a file name where you want to save word list to:
+The `Program manager` allows to export currently recaping word list to file (for printing). To do this switch to the `Words manager` tab of the `Program manager` and press `Export list...` ([#Previewing_the_word_list see]). Note, that the `Export list...` button is enabled only if recap list is set ([#Setting_recap_list see]). Press this button and enter a file name where you want to save word list to:
 
 http://vocrecaptor.com/images/en/v2.1/exportlist.jpg
 
