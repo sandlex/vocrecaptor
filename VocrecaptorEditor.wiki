@@ -1,13 +1,5 @@
 #summary Working with Vocrecaptor Editor.
 
-= Vocrecaptor Editor v2.1 =
-Vocrecaptor Editor is written in Java, works on all platforms and requires [http://java.sun.com/javase/downloads/index.jsp Java Runtime Environment] (JRE) 6 or later.
-
-[download Download]
-
-= What is Vocrecaptor Editor? =
-Let's assume you are reading a book on a language you are studying (for example english) or you are making a home assignment for your english language courses and you don't want to miss any single word you've met for the first time and you want to learn it. Of course, you can write it out in special notebook but let's do it in a different way.
-
 = How to work with Vocrecaptor Editor? =
 
   * [#Starting_Vocrecaptor_Editor Starting Vocrecaptor Editor]
