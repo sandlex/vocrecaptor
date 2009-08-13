@@ -19,7 +19,7 @@
   * [#Setting_up_a_look_and_feel Setting up a look and feel]
 
 === Starting Vocrecaptor Editor ===
-To run the VocRecaptor from the command line, go to the dist folder and type the following: `java -jar vocrecaptor.jar`. You can
+To run the VocRecaptor from the command line, go to the dist folder and type the following: `java -jar vocrecaptoreditor-v2.1.jar`. You can
 also execute the program by double clicking on the jar-file.
 
 Start Vocrecaptor. The program icon (the black rectangle) will appear in a system tray:
