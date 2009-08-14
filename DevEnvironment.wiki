@@ -5,7 +5,7 @@
   * All project require [http://java.sun.com/javase/downloads/index.jsp SDK 1.6] or higher installed.
   * All projects are configured to default SDK installation path - `C:\java\jdk1.6.0_12` and `C:\java\jre1.6.0_12`.
   * Default workspace path for both Eclipse and NetBeans IDEs - `C:\projects\vocrecaptor\workspace`.
-  * [http://tortoisesvn.tigris.org Subversion client] or separate plugins for particular IDE - Eclipse or NetBeans.
+  * [http://tortoisesvn.tigris.org Subversion client] ([http://rapidsvn.tigris.org also]) or separate plugins for particular IDE - Eclipse or NetBeans.
 
 = Sub-projects requirements =
 
