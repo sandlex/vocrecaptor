@@ -19,7 +19,7 @@ a:hover {
 	text-decoration: underline;
 }
 TABLE {
-	TEXT-INDENT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Sans-Serif; TEXT-ALIGN: justify
+	TEXT-INDENT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Sans-Serif; TEXT-ALIGN: justify;
 }
 P {
 	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; TEXT-INDENT: 20px; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Sans-Serif; TEXT-ALIGN: justify
@@ -30,14 +30,20 @@ P {
   color: #3366CC;
   text-decoration: none;
 }
-.large_input {font-size: 30pt; width: 400px; color: gray}
+.large_input_valid {font-size: 24pt; width: 400px; height: 45px; color: gray; background-color: white; margin-bottom: 10}
+.large_input_invalid {font-size: 24pt; width: 400px; height: 45px; color: gray; background-color: red; margin-bottom: 10}
 .gwt-MenuItem-selected {
 	color: yellow;
 	text-decoration: underline;
 }
-
-.large_input {font-size: 30pt; width: 400px; color: gray}
-
+.topBottomBordered {
+	border-top-color: #3366CC; 
+	border-bottom-color: #3366CC; 
+	border-width: 1px;
+}
+.handy {
+	cursor: pointer;
+}
 /** Add css rules here for your application.
 h1 {
   font-size: 2em;

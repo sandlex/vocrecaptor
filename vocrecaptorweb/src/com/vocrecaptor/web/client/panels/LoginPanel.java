@@ -1,45 +1,77 @@
 package com.vocrecaptor.web.client.panels;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.vocrecaptor.web.client.controls.AuthTextBox;
+import com.vocrecaptor.web.client.controls.Validatable;
 import com.vocrecaptor.web.client.menus.UserMenu;
+import com.vocrecaptor.web.client.model.ApplicationModel;
+import com.vocrecaptor.web.client.model.User;
+import com.vocrecaptor.web.client.remote.UserService;
+import com.vocrecaptor.web.client.remote.UserServiceAsync;
 
 public class LoginPanel extends Composite {
 
-	private FlexTable table;
+	private final UserServiceAsync userService = GWT.create(UserService.class);
 	
-	public LoginPanel() {
+	public LoginPanel(ApplicationModel model_) {
+		final ApplicationModel model = model_;
 		
-		table = new FlexTable();
+		VerticalPanel panel = new VerticalPanel();
+		panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
 
-		final TextBox loginBox = new AuthTextBox("Login...");
-		table.setWidget(0, 0, loginBox);
+		final AuthTextBox loginBox = new AuthTextBox("Login...");
+		panel.add(loginBox);
 		
-		final TextBox passwordBox = new AuthTextBox("Password...");
-		table.setWidget(1, 0, passwordBox);
+		final AuthTextBox passwordBox = new AuthTextBox("Password...");
+		panel.add(passwordBox);
 		
-		Panel panel = new HorizontalPanel();
-		//panel.setHorizontalAlignment(HorizontalAlignmentConstant.ALIGN_CENTER);
+		HorizontalPanel buttons = new HorizontalPanel();
 		Button signInButton = new Button("Login");
 		signInButton.addClickHandler(new ClickHandler() {
 
 			@Override
 			public void onClick(ClickEvent event) {
-				RootPanel.get("menu").clear();
-				RootPanel.get("menu").add(new UserMenu());
-				RootPanel.get("centralPart").clear();
-				RootPanel.get("centralPart").add(new HomePanel());
+				
+				userService.login(loginBox.getText(), passwordBox.getText(),
+						new AsyncCallback<Integer>() {
+
+							@Override
+							public void onFailure(Throwable caught) {
+							}
+
+							@Override
+							public void onSuccess(Integer result) {
+								
+								if (result == 1) {
+									loginBox.setValue(Validatable.NO_USER_WITH_SUCH_LOGIN);
+									loginBox.setInvalid();
+									return;
+								}
+								
+								if (result == 2) {
+									passwordBox.setValue(Validatable.WRONG_PASSWORD);
+									passwordBox.setInvalid();
+									return;
+								}
+
+								model.setUser(new User(loginBox.getText(), passwordBox.getText()));
+								RootPanel.get("menu").clear();
+								RootPanel.get("menu").add(new UserMenu(model));
+								RootPanel.get("centralPart").clear();
+								RootPanel.get("centralPart").add(new HomePanel());
+							}
+						});
 			}
 		});
-		panel.add(signInButton);
+		buttons.add(signInButton);
 
 		Button cancelButton = new Button("Cancel");
 		cancelButton.addClickHandler(new ClickHandler() {
@@ -50,10 +82,12 @@ public class LoginPanel extends Composite {
 				RootPanel.get("centralPart").add(new StartPanel());
 			}
 		});
-		panel.add(cancelButton);
-		table.setWidget(2, 0, panel);
+		buttons.add(cancelButton);
+		panel.add(buttons);
 
-		initWidget(table);
+		initWidget(panel);
+		setWidth("600px");
 	}
-	
+	//Window.Location.replace(CONTEXT_URL + "/install.jsp");
+
 }

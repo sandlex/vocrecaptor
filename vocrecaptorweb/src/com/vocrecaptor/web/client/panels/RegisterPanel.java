@@ -1,48 +1,101 @@
 package com.vocrecaptor.web.client.panels;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.vocrecaptor.web.client.controls.AuthTextBox;
+import com.vocrecaptor.web.client.controls.Validatable;
 import com.vocrecaptor.web.client.menus.UserMenu;
+import com.vocrecaptor.web.client.model.ApplicationModel;
+import com.vocrecaptor.web.client.remote.UserService;
+import com.vocrecaptor.web.client.remote.UserServiceAsync;
 
 public class RegisterPanel extends Composite {
 
-	private FlexTable table;
+	private final UserServiceAsync userService = GWT.create(UserService.class);
 	
-	public RegisterPanel() {
-		
-		table = new FlexTable();
+	private AuthTextBox loginBox; 
+	
+	private AuthTextBox passwordBox;
+	
+	private AuthTextBox passwordRetypeBox;
 
-		final TextBox loginBox = new AuthTextBox("Login...");
-		table.setWidget(0, 0, loginBox);
+	public RegisterPanel(ApplicationModel model_) {
+		final ApplicationModel model = model_;
 		
-		final TextBox passwordBox = new AuthTextBox("Password...");
-		table.setWidget(1, 0, passwordBox);
-		
-		final TextBox passwordRetypeBox = new AuthTextBox("Password...");
-		table.setWidget(2, 0, passwordRetypeBox);
+		VerticalPanel panel = new VerticalPanel();
+		panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
 
-		Panel panel = new HorizontalPanel();
+		loginBox = new AuthTextBox("Login...");
+		panel.add(loginBox);
+		
+		passwordBox = new AuthTextBox("Password...");
+		panel.add(passwordBox);
+		
+		passwordRetypeBox = new AuthTextBox("Retype password...");
+		panel.add(passwordRetypeBox);
+
+		Panel buttons = new HorizontalPanel();
 		//panel.setHorizontalAlignment(HorizontalAlignmentConstant.ALIGN_CENTER);
 		Button signInButton = new Button("Register");
 		signInButton.addClickHandler(new ClickHandler() {
 
 			@Override
 			public void onClick(ClickEvent event) {
+				
+				
+				if (!checkPasswordsMatch()) {
+					
+					passwordRetypeBox.setValue(Validatable.PASSWORDS_ARE_NOT_MATCHING);
+					passwordRetypeBox.setInvalid();
+					
+					return;
+				}
+				
+				if (!checkLoginIsAvailable()) {
+					
+					loginBox.setValue(Validatable.LOGIN_IS_NOT_AVAILABLE);
+					loginBox.setInvalid();
+
+					return;
+				}
+				
+				
+				userService.register(loginBox.getText(), passwordBox.getText(),
+						new AsyncCallback<Integer>() {
+
+							@Override
+							public void onFailure(Throwable caught) {
+							}
+
+							@Override
+							public void onSuccess(Integer result) {
+								if (result == null) {
+								} else {
+								}
+							}
+						});
+				
+				
 				RootPanel.get("menu").clear();
-				RootPanel.get("menu").add(new UserMenu());
+				RootPanel.get("menu").add(new UserMenu(model));
 				RootPanel.get("centralPart").clear();
 				RootPanel.get("centralPart").add(new HomePanel());
 			}
+
+//			private boolean checkLoginIsAvailable() {
+//				// TODO Auto-generated method stub
+//				return false;
+//			}
 		});
-		panel.add(signInButton);
+		buttons.add(signInButton);
 
 		Button cancelButton = new Button("Cancel");
 		cancelButton.addClickHandler(new ClickHandler() {
@@ -53,10 +106,38 @@ public class RegisterPanel extends Composite {
 				RootPanel.get("centralPart").add(new StartPanel());
 			}
 		});
-		panel.add(cancelButton);
-		table.setWidget(3, 0, panel);
+		buttons.add(cancelButton);
+		panel.add(buttons);
 
-		initWidget(table);
+		initWidget(panel);
+		setWidth("600px");
+	}
+
+	private boolean checkPasswordsMatch() {
+		
+		return passwordBox.getValue().equals(passwordRetypeBox.getValue());
+	}
+
+	private Boolean statusObject;
+	
+	private boolean checkLoginIsAvailable() {
+
+		statusObject = false;
+		
+		userService.checkLogin(loginBox.getText(),
+				new AsyncCallback<Boolean>() {
+
+					@Override
+					public void onFailure(Throwable caught) {
+					}
+
+					@Override
+					public void onSuccess(Boolean result) {
+						statusObject = result;
+					}
+				});
+		
+		return statusObject;
 	}
 	
 }
