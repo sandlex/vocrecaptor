@@ -58,7 +58,6 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 
 	@Override
 	public Long delete(DictionaryTransferObject dictionary) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -82,6 +81,7 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 
 			return result;
 		} finally {
+			//FIXME Check all these cases and remove rollback
 			if (pm.currentTransaction().isActive()) {
 				pm.currentTransaction().rollback();
 			}
@@ -105,8 +105,6 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 			}
 		}
 	}
-	
-	//FIXME Find a better solution. Maybe keep IDs insted of objects
 	
 	private DictionaryTransferObject dictionaryToDTO(Dictionary dictionary) {
 		return new DictionaryTransferObject(dictionary.getId(), dictionary.getUser(), dictionary.getLearningLanguage(), 

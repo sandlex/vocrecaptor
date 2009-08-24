@@ -1,13 +1,13 @@
 package com.vocrecaptor.web.client.panels;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.vocrecaptor.web.client.controls.Validatable;
 import com.vocrecaptor.web.client.menus.UserMenu;
 import com.vocrecaptor.web.client.model.ApplicationModel;
 import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
+import com.vocrecaptor.web.client.utils.ErrorNotifier;
 
 public class LoginPanel extends AbstractAuthPanel {
 
@@ -40,7 +40,7 @@ public class LoginPanel extends AbstractAuthPanel {
 					public void onSuccess(Long result) {
 						
 						if (result == -1L || result == -2L) {
-							RootPanel.get("error").add(new HTML(Validatable.WRONG_LOGIN_PASSWORD));
+							ErrorNotifier.showError(Validatable.WRONG_LOGIN_PASSWORD);
 							return;
 						}
 						

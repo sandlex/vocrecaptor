@@ -40,7 +40,6 @@ StaticContentService {
 			}
 		}
 		
-		// TODO Auto-generated method stub
 		return resultHtml.toString();
 	}
 

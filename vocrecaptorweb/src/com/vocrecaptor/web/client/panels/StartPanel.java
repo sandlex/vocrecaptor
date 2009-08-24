@@ -21,7 +21,6 @@ public class StartPanel extends Composite {
 	public StartPanel() {
 		
 		final VerticalPanel panel = new VerticalPanel();
-		//panel.setVerticalAlignment(VerticalPanel.ALIGN_TOP); //FIXME doesn't work
 		
 		userService.count(new AsyncCallback<Integer>() {
 

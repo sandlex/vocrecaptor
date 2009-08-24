@@ -9,6 +9,7 @@ import com.vocrecaptor.web.client.controls.Validatable;
 import com.vocrecaptor.web.client.menus.UserMenu;
 import com.vocrecaptor.web.client.model.ApplicationModel;
 import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
+import com.vocrecaptor.web.client.utils.ErrorNotifier;
 
 public class RegisterPanel extends AbstractAuthPanel {
 
@@ -41,7 +42,7 @@ public class RegisterPanel extends AbstractAuthPanel {
 		
 		
 		if (!checkPasswordsMatch()) {
-			RootPanel.get("error").add(new HTML(Validatable.PASSWORDS_ARE_NOT_MATCHING));
+			ErrorNotifier.showError(Validatable.PASSWORDS_ARE_NOT_MATCHING);
 			return;
 		}
 		
@@ -75,7 +76,7 @@ public class RegisterPanel extends AbstractAuthPanel {
 										}
 									});
 						} else {
-							RootPanel.get("error").add(new HTML(Validatable.LOGIN_IS_NOT_AVAILABLE));
+							ErrorNotifier.showError(Validatable.LOGIN_IS_NOT_AVAILABLE);
 						}
 					}
 				});				
