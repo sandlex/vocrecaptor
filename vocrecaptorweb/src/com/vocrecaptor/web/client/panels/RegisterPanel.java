@@ -1,6 +1,7 @@
 package com.vocrecaptor.web.client.panels;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.vocrecaptor.web.client.controls.AuthTextBox;
@@ -40,10 +41,7 @@ public class RegisterPanel extends AbstractAuthPanel {
 		
 		
 		if (!checkPasswordsMatch()) {
-			
-			passwordRetypeBox.setValue(Validatable.PASSWORDS_ARE_NOT_MATCHING);
-			passwordRetypeBox.setInvalid();
-			
+			RootPanel.get("error").add(new HTML(Validatable.PASSWORDS_ARE_NOT_MATCHING));
 			return;
 		}
 		
@@ -77,8 +75,7 @@ public class RegisterPanel extends AbstractAuthPanel {
 										}
 									});
 						} else {
-							loginBox.setValue(Validatable.LOGIN_IS_NOT_AVAILABLE);
-							loginBox.setInvalid();
+							RootPanel.get("error").add(new HTML(Validatable.LOGIN_IS_NOT_AVAILABLE));
 						}
 					}
 				});				

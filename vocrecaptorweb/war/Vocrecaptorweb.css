@@ -94,6 +94,15 @@ P {
 	padding: 10px 10px 10px 10px;
 }
 
+#error {
+	background: #FFF1A8; 
+}
+
+.centralPart {
+	border-spacing: 0px;
+	border: solid 1px #3366CC;
+}
+
 /** Add css rules here for your application.
 h1 {
   font-size: 2em;

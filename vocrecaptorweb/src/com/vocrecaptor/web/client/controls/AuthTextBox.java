@@ -19,11 +19,7 @@ public class AuthTextBox extends TextBox implements Validatable {
 			@Override
 			public void onFocus(FocusEvent arg0) {
 				setValid();
-				if (emptyValue.equals(getValue())
-						|| PASSWORDS_ARE_NOT_MATCHING.equals(getValue())
-						|| LOGIN_IS_NOT_AVAILABLE.equals(getValue())
-						|| NO_USER_WITH_SUCH_LOGIN.equals(getValue())
-						|| WRONG_PASSWORD.equals(getValue())) {
+				if (emptyValue.equals(getValue())) {
 					setValue("");
 				}
 			}

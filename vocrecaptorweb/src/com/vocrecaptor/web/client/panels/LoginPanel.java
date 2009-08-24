@@ -1,6 +1,7 @@
 package com.vocrecaptor.web.client.panels;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.vocrecaptor.web.client.controls.Validatable;
@@ -38,18 +39,11 @@ public class LoginPanel extends AbstractAuthPanel {
 					@Override
 					public void onSuccess(Long result) {
 						
-						if (result == -1L) {
-							loginBox.setValue(Validatable.NO_USER_WITH_SUCH_LOGIN);
-							loginBox.setInvalid();
+						if (result == -1L || result == -2L) {
+							RootPanel.get("error").add(new HTML(Validatable.WRONG_LOGIN_PASSWORD));
 							return;
 						}
 						
-						if (result == -2L) {
-							passwordBox.setValue(Validatable.WRONG_PASSWORD);
-							passwordBox.setInvalid();
-							return;
-						}
-
 						model.setUser(new UserTransferObject(result, loginBox.getText(), passwordBox.getText()));
 						RootPanel.get("menu").clear();
 						RootPanel.get("menu").add(new UserMenu(model));
