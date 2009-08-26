@@ -24,7 +24,7 @@ public class Vocrecaptorweb implements EntryPoint {
 		RootPanel.get("logo").add(new LogoImage("images/logo153.png"));
 		RootPanel.get("menu").add(new MainMenu(model));
 		RootPanel.get("centralPart").add(new StartPanel());
-		RootPanel.get("version").add(new HTML("<small>v0.0.0</small>"));
+		RootPanel.get("version").add(new HTML("v0.0.0"));
 	}
 	
 }

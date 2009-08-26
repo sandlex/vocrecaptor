@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase="http://localhost:8080/vocrecaptorweb/fx/" href="Vocrecaptorexercises_browser.jnlp">
+<!-- <jnlp spec="1.0+" codebase="http://localhost:1852/exercises/" href="Vocrecaptorexercises_browser.jnlp"> -->
+<jnlp spec="1.0+" codebase="http://vocrecaptor.appspot.com/exercises/" href="Vocrecaptorexercises_browser.jnlp">
     <information>
         <title>Vocrecaptorexercises</title>
         <vendor>Alexey Peskov</vendor>
-        <homepage href="http://localhost:8080/vocrecaptorweb/fx/"/>
+        <!-- <homepage href="http://localhost:1852/exercises/"/> -->
+        <homepage href="http://vocrecaptor.appspot.com/exercises/"/>
         <description>Vocrecaptorexercises</description>
         <offline-allowed/>
         <shortcut>

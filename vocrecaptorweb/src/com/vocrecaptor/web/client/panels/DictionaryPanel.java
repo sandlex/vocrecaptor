@@ -24,6 +24,7 @@ import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
 import com.vocrecaptor.web.client.remote.LanguageService;
 import com.vocrecaptor.web.client.remote.LanguageServiceAsync;
 import com.vocrecaptor.web.client.remote.transferobjects.LanguageTransferObject;
+import com.vocrecaptor.web.client.utils.ErrorNotifier;
 
 public class DictionaryPanel extends Composite {
 
@@ -86,9 +87,9 @@ public class DictionaryPanel extends Composite {
 		form.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
 			public void onSubmitComplete(SubmitCompleteEvent arg0) {
 				if (arg0.getResults().contains("ERROR")) {
-					System.out.println("oh shit, exception! " + arg0.getResults());
+					ErrorNotifier.showError(ErrorNotifier.SOMETHING_WENT_WRONG);
 				} else if(arg0.getResults().contains("BADFORMAT")) {
-					System.out.println("oh shit, it's a bad file dude!");
+					ErrorNotifier.showError(ErrorNotifier.WRONG_FILE_FORMAT);
 				} else {
 					dialog.hide();
 					parent.updateDictionaries();
