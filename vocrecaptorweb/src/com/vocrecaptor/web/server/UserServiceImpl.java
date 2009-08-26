@@ -1,12 +1,19 @@
 package com.vocrecaptor.web.server;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.vocrecaptor.web.client.remote.UserService;
+import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
 import com.vocrecaptor.web.server.jdo.User;
 
 /**
@@ -15,6 +22,22 @@ import com.vocrecaptor.web.server.jdo.User;
 @SuppressWarnings("serial")
 public class UserServiceImpl extends RemoteServiceServlet implements
 		UserService {
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+			
+		UserTransferObject userTO = (UserTransferObject) request.getSession().getAttribute("userToLogin");
+		System.out.println(userTO.getLogin() + ":" + userTO.getPassword());
+		request.getSession().removeAttribute("userToLogin");
+		
+		out.print(find(userTO.getLogin(), userTO.getPassword()));
+		out.close();
+	}
 
 	//TODO Case-insensitive user names i.e. vocrecaptor=Vocrecaptor 
 	

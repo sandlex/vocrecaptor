@@ -16,7 +16,6 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.vocrecaptor.web.client.remote.DictionaryService;
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
 import com.vocrecaptor.web.server.jdo.Dictionary;
-import com.vocrecaptor.web.server.jdo.Language;
 
 @SuppressWarnings("serial")
 public class DictionaryServiceImpl extends RemoteServiceServlet implements
@@ -45,6 +44,7 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		try {
 			pm.currentTransaction().begin();
 			Dictionary dictionary = dictionaryDTOToDictionary(dictionaryTO);
+			//FIXME java.lang.IllegalArgumentException: file: byte[] properties must be 500 bytes or less.  Instead, use com.google.appengine.api.datastore.Blob, which can store binary data of any size.
 			Long result = pm.makePersistent(dictionary).getId();
 			pm.currentTransaction().commit();
 

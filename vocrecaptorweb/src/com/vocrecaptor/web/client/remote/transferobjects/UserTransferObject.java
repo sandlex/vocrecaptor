@@ -14,10 +14,14 @@ public class UserTransferObject implements Serializable {
 	public UserTransferObject() {
 	}
 	
-	public UserTransferObject(Long id, String login, String password) {
-		this.id = id;
+	public UserTransferObject(String login, String password) {
 		this.login = login;
 		this.password = password;
+	}
+
+	public UserTransferObject(Long id, String login, String password) {
+		this(login, password);
+		this.id = id;
 	}
 
 	public Long getId() {

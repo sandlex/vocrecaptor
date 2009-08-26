@@ -51,4 +51,46 @@
     <url-pattern>/vocrecaptorweb/upload</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.vocrecaptor.web.server.servlet.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/vocrecaptorweb/login</url-pattern>
+  </servlet-mapping>
+
+<!-- 
+  <servlet>
+    <servlet-name>dictionaryListGetter</servlet-name>
+    <servlet-class>com.vocrecaptor.gwt.server.servlet.fx.DictionaryListGetter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>dictionaryListGetter</servlet-name>
+    <url-pattern>/vocrecaptorgwt/dictionaryListGetter</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>dictionaryGetter</servlet-name>
+    <servlet-class>com.vocrecaptor.gwt.server.servlet.fx.DictionaryGetter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>dictionaryGetter</servlet-name>
+    <url-pattern>/vocrecaptorgwt/dictionaryGetter</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>categoryOrSessionListGetter</servlet-name>
+    <servlet-class>com.vocrecaptor.gwt.server.servlet.fx.CategoryOrSessionListGetter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>categoryOrSessionListGetter</servlet-name>
+    <url-pattern>/vocrecaptorgwt/categoryOrSessionListGetter</url-pattern>
+  </servlet-mapping>
+
+-->
 </web-app>
