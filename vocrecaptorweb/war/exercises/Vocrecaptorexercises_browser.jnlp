@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase="http://localhost:8080/vocrecaptorweb/" href="Vocrecaptorexercises_browser.jnlp">
+<jnlp spec="1.0+" codebase="http://localhost:8080/vocrecaptorweb/fx/" href="Vocrecaptorexercises_browser.jnlp">
     <information>
         <title>Vocrecaptorexercises</title>
         <vendor>Alexey Peskov</vendor>
-        <homepage href="http://localhost:8080/vocrecaptorweb/"/>
+        <homepage href="http://localhost:8080/vocrecaptorweb/fx/"/>
         <description>Vocrecaptorexercises</description>
         <offline-allowed/>
         <shortcut>

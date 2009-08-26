@@ -5,7 +5,6 @@ import java.util.List;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
-import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
 
 @RemoteServiceRelativePath("dictionaryService")
 public interface DictionaryService extends RemoteService {

@@ -21,8 +21,6 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
-import com.vocrecaptor.web.client.remote.DictionaryService;
-import com.vocrecaptor.web.client.remote.DictionaryServiceAsync;
 import com.vocrecaptor.web.client.remote.LanguageService;
 import com.vocrecaptor.web.client.remote.LanguageServiceAsync;
 import com.vocrecaptor.web.client.remote.transferobjects.LanguageTransferObject;
@@ -30,7 +28,6 @@ import com.vocrecaptor.web.client.remote.transferobjects.LanguageTransferObject;
 public class DictionaryPanel extends Composite {
 
 	private final LanguageServiceAsync languageService = GWT.create(LanguageService.class);
-	private final DictionaryServiceAsync dictionaryService = GWT.create(DictionaryService.class);
 	
 	private List<LanguageTransferObject> languages = new ArrayList<LanguageTransferObject>();
 	private ListBox learnLang;
@@ -137,8 +134,8 @@ public class DictionaryPanel extends Composite {
 			@Override
 			public void onSuccess(List<LanguageTransferObject> result) {
 				for (LanguageTransferObject lang : result) {
-					learnLang.addItem(lang.getName(), lang.getShortName() /* String.valueOf(lang.getId()*/);
-					throughLang.addItem(lang.getName(), lang.getShortName() /* String.valueOf(lang.getId()*/);
+					learnLang.addItem(lang.getName(), lang.getShortName());
+					throughLang.addItem(lang.getName(), lang.getShortName());
 					languages.add(lang);
 				}
 			}

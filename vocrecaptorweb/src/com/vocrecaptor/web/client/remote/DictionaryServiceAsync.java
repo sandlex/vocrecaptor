@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
-import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
 
 public interface DictionaryServiceAsync {
 

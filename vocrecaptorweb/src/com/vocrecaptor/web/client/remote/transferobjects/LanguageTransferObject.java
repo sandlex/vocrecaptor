@@ -10,8 +10,6 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class LanguageTransferObject implements Serializable {
 
-//	private Long id;
-
 	private String shortName;
 	
 	private String name;
@@ -19,19 +17,10 @@ public class LanguageTransferObject implements Serializable {
 	public LanguageTransferObject() {
 	}
 	
-	public LanguageTransferObject(/*Long id, */String shortName, String name) {
-//		this.id = id;
+	public LanguageTransferObject(String shortName, String name) {
 		this.shortName = shortName;
 		this.name = name;
 	}
-
-//	public Long getId() {
-//		return id;
-//	}
-//
-//	public void setId(Long id) {
-//		this.id = id;
-//	}
 
 	public String getShortName() {
 		return shortName;

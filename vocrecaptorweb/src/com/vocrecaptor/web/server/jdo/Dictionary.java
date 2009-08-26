@@ -22,10 +22,10 @@ public class Dictionary {
 	private Long user;
 	
 	@Persistent
-	private /*Long*/String learningLanguage;
+	private String learningLanguage;
 	
 	@Persistent
-	private /*Long*/String throughLanguage;
+	private String throughLanguage;
 	
 	@Persistent
 	private Boolean isPublic;
@@ -36,8 +36,8 @@ public class Dictionary {
 	@Persistent
 	private byte[] file;
 
-	public Dictionary(Long id, Long user, /*Long*/String learningLanguage,
-			/*Long*/String throughLanguage, Boolean isPublic, String description,
+	public Dictionary(Long id, Long user, String learningLanguage,
+			String throughLanguage, Boolean isPublic, String description,
 			byte[] file) {
 		this.id = id;
 		this.user = user;
@@ -60,19 +60,19 @@ public class Dictionary {
 		this.user = user;
 	}
 
-	public /*Long*/String getLearningLanguage() {
+	public String getLearningLanguage() {
 		return learningLanguage;
 	}
 
-	public void setLearningLanguage(/*Long*/String learningLanguage) {
+	public void setLearningLanguage(String learningLanguage) {
 		this.learningLanguage = learningLanguage;
 	}
 
-	public /*Long*/String getThroughLanguage() {
+	public String getThroughLanguage() {
 		return throughLanguage;
 	}
 
-	public void setThroughLanguage(/*Long*/String throughLanguage) {
+	public void setThroughLanguage(String throughLanguage) {
 		this.throughLanguage = throughLanguage;
 	}
 

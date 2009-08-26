@@ -74,7 +74,7 @@ public class DictionariesPanel extends Composite {
 				table.setWidget(0, 1, new HTML("description"));
 				table.setWidget(0, 2, new HTML("languages"));
 				table.setWidget(0, 3, new HTML("public"));
-				table.setWidget(0, 4, new HTML("action"));
+				table.setWidget(0, 4, new HTML("download"));
 				
 				for (DictionaryTransferObject dict : result) {
 					int row = result.indexOf(dict) + 1;

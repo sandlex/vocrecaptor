@@ -1,37 +1,32 @@
 package com.vocrecaptor.web.client.menus;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.vocrecaptor.web.client.controls.HyperlinkMenuItem;
 import com.vocrecaptor.web.client.model.ApplicationModel;
 import com.vocrecaptor.web.client.panels.DevicesPanel;
 import com.vocrecaptor.web.client.panels.DictionariesPanel;
+import com.vocrecaptor.web.client.panels.ExercisesPanel;
 import com.vocrecaptor.web.client.panels.StartPanel;
 import com.vocrecaptor.web.client.panels.StatisticsPanel;
-import com.vocrecaptor.web.client.remote.StaticContentService;
-import com.vocrecaptor.web.client.remote.StaticContentServiceAsync;
 
 public class UserMenu extends Composite {
 
-	private final StaticContentServiceAsync staticContentService = GWT.create(StaticContentService.class);
-	
 	public UserMenu(ApplicationModel model_) {
 		final ApplicationModel model = model_;
 		
 		HorizontalPanel panel = new HorizontalPanel();
 		
+		//FIXME Refactor this: create abstract menu with common item
 		HyperlinkMenuItem exercises = new HyperlinkMenuItem("Exercises", new Command() {
 
 			@Override
 			public void execute() {
-				loadStaticHtmlContent("vocrecaptorexercises.html");
-				//RootPanel.get("centralPart").clear();
-				//RootPanel.get("centralPart").add(new ExercisesPanel());
+//				loadStaticHtmlContent("vocrecaptorexercises.html");
+				RootPanel.get("centralPart").clear();
+				RootPanel.get("centralPart").add(new ExercisesPanel());
 			}
 			
 		});
@@ -88,20 +83,4 @@ public class UserMenu extends Composite {
 		initWidget(panel);
 	}
 
-	private void loadStaticHtmlContent(String fileName) {
-		staticContentService.getHtmlContent(fileName, new AsyncCallback<String>() {
-
-			@Override
-			public void onFailure(Throwable caught) {
-				caught.printStackTrace();
-			}
-
-			@Override
-			public void onSuccess(String result) {
-				RootPanel.get("centralPart").clear();
-				RootPanel.get("centralPart").add(new HTMLPanel(result));
-			}
-		});		
-	}
-	
 }

@@ -9,9 +9,9 @@ public class DictionaryTransferObject implements Serializable {
 
 	private Long user;
 
-	private /*Long*/String learningLanguage;
+	private String learningLanguage;
 
-	private /*Long*/String throughLanguage;
+	private String throughLanguage;
 
 	private Boolean isPublic;
 
@@ -22,8 +22,8 @@ public class DictionaryTransferObject implements Serializable {
 	public DictionaryTransferObject() {
 	}
 	
-	public DictionaryTransferObject(Long id, Long user, /*Long*/String learningLanguage,
-			/*Long*/String throughLanguage, Boolean isPublic, String description,
+	public DictionaryTransferObject(Long id, Long user, String learningLanguage,
+			String throughLanguage, Boolean isPublic, String description,
 			byte[] file) {
 		this.id = id;
 		this.user = user;
@@ -50,19 +50,19 @@ public class DictionaryTransferObject implements Serializable {
 		this.user = user;
 	}
 
-	public /*Long*/String getLearningLanguage() {
+	public String getLearningLanguage() {
 		return learningLanguage;
 	}
 
-	public void setLearningLanguage(/*Long*/String learningLanguage) {
+	public void setLearningLanguage(String learningLanguage) {
 		this.learningLanguage = learningLanguage;
 	}
 
-	public /*Long*/String getThroughLanguage() {
+	public String getThroughLanguage() {
 		return throughLanguage;
 	}
 
-	public void setThroughLanguage(/*Long*/String throughLanguage) {
+	public void setThroughLanguage(String throughLanguage) {
 		this.throughLanguage = throughLanguage;
 	}
 

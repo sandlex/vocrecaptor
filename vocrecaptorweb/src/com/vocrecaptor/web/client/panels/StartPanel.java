@@ -18,6 +18,7 @@ public class StartPanel extends Composite {
 	private final LanguageServiceAsync languageService = GWT.create(LanguageService.class);
 	private final DictionaryServiceAsync dictionaryService = GWT.create(DictionaryService.class);
 	
+	
 	public StartPanel() {
 		
 		final VerticalPanel panel = new VerticalPanel();

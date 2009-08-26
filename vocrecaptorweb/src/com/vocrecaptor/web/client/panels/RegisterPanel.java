@@ -1,7 +1,6 @@
 package com.vocrecaptor.web.client.panels;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.vocrecaptor.web.client.controls.AuthTextBox;

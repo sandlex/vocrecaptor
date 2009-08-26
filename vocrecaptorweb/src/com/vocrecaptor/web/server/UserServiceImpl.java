@@ -16,6 +16,8 @@ import com.vocrecaptor.web.server.jdo.User;
 public class UserServiceImpl extends RemoteServiceServlet implements
 		UserService {
 
+	//TODO Case-insensitive user names i.e. vocrecaptor=Vocrecaptor 
+	
 	@Override
 	public Boolean find(String login) {
 
