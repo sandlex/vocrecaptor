@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -17,6 +18,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
 import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
 
 public class Login extends HttpServlet {
@@ -47,6 +49,21 @@ public class Login extends HttpServlet {
 		String login = "";
 		String password = "";
 		
+		//FIXME use this
+		/*Document doc =
+XMLParser.parse(responseText);
+Element root = (Element) doc.getFirstChild();
+String firstName = root
+.getElementsByTagName("firstName")
+.item(0)
+.getFirstChild()
+.getNodeValue();
+String lastName = root
+.getElementsByTagName("lastName")
+.item(0)
+.getFirstChild()
+.getNodeValue();*/
+		
 		NodeList fields = xmlDoc.getElementsByTagName("field");
         for (int i = 0; i < fields.getLength(); i++) {
         	Node field = fields.item(i);
@@ -54,9 +71,12 @@ public class Login extends HttpServlet {
         	if ("login".equals(fieldName)) login = field.getTextContent();
         	if ("password".equals(fieldName)) password = field.getTextContent();
         }
+        
         UserTransferObject userTO = new UserTransferObject(login, password);
         
+        System.out.println(request.getSession().getId());
 		request.getSession().setAttribute("userToLogin", userTO);
+		request.setAttribute("sessionId", request.getSession().getId());
 		response.sendRedirect("userService");
 	}
 

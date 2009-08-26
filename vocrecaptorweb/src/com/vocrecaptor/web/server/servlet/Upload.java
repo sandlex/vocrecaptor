@@ -92,6 +92,7 @@ public class Upload extends HttpServlet {
 				}
 			}
 
+			System.out.println(request.getSession().getId());
 			request.getSession().setAttribute("dictionary", dictionaryTO);
 			response.sendRedirect("dictionaryService");
 

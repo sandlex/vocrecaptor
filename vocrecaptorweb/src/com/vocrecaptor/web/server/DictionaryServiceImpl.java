@@ -29,6 +29,7 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 			HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 			
+		System.out.println(request.getSession().getId());
 		DictionaryTransferObject dictionaryTO = (DictionaryTransferObject) request.getSession().getAttribute("dictionary"); 
 		request.getSession().removeAttribute("dictionary");
 		
