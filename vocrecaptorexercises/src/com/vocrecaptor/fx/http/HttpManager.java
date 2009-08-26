@@ -20,8 +20,8 @@ public class HttpManager {
      * Server URL. Currently pointing to the test server where
      * web-application is running under Apache Tomcat application server.
      */
-    //static private final String SERVER_URL = "http://vocrecaptor.s156.eatj.com";
-    static private final String SERVER_URL = "http://localhost:8080";
+    //static private final String SERVER_URL = "http://vocrecaptor.appspot.com";
+    static private final String SERVER_URL = "http://localhost:1852";
 
     /**
      * Performs login operation using user login and password.
@@ -33,7 +33,7 @@ public class HttpManager {
      * @throws java.lang.Exception
      */
     static public String authorize(String login, String password) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorgwt/loginValidator",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/login",
                 "<fields><field name=\"login\">" + login + "</field>" +
                 "<field name=\"password\">" + password + "</field></fields>");
     }
@@ -46,7 +46,7 @@ public class HttpManager {
      * @throws java.lang.Exception
      */
     static public String getDictionaryList(int userId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorgwt/dictionaryListGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/dictionaryListGetter",
                 "<fields><field name=\"userId\">" + userId + "</field></fields>");
     }
 
@@ -63,7 +63,7 @@ public class HttpManager {
      */
     static public String getWordList(int userId, int dictId,
             String category, String session) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorgwt/dictionaryGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/dictionaryGetter",
                 "<fields><field name=\"userId\">" + userId + "</field>" +
                 "<field name=\"dictId\">" + dictId + "</field>" +
                 "<field name=\"category\">" + category + "</field>" +
@@ -79,7 +79,7 @@ public class HttpManager {
      * @throws java.lang.Exception
      */
     static public String getSessionList(int userId, int dictId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorgwt/categoryOrSessionListGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/categoryOrSessionListGetter",
                 "<fields><field name=\"userId\">" + userId + "</field>" +
                 "<field name=\"dictId\">" + dictId + "</field>" +
                 "<field name=\"attr\">s</field></fields>");
@@ -94,7 +94,7 @@ public class HttpManager {
      * @throws java.lang.Exception
      */
     static public String getCategoryList(int userId, int dictId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorgwt/categoryOrSessionListGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/categoryOrSessionListGetter",
                 "<fields><field name=\"userId\">" + userId + "</field>" +
                 "<field name=\"dictId\">" + dictId + "</field>" +
                 "<field name=\"attr\">c</field></fields>");
