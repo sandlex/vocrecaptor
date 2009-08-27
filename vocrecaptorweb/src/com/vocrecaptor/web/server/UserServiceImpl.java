@@ -30,35 +30,30 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-			
-		UserTransferObject userTO = (UserTransferObject) request.getSession().getAttribute("userToLogin");
+
+		UserTransferObject userTO = (UserTransferObject) request.getSession()
+				.getAttribute("userToLogin");
 		request.getSession().removeAttribute("userToLogin");
-		
+
 		out.print(find(userTO.getLogin(), userTO.getPassword()));
 		out.close();
 	}
 
-	//TODO Case-insensitive user names i.e. vocrecaptor=Vocrecaptor 
-	
+	// TODO Case-insensitive user names i.e. vocrecaptor=Vocrecaptor
+
 	@Override
 	public Boolean find(String login) {
 
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(User.class);
-			query.setFilter("login == loginParam");
-			query.declareParameters("String loginParam");
+		Query query = pm.newQuery(User.class);
+		query.setFilter("login == loginParam");
+		query.declareParameters("String loginParam");
 
-			List<User> results = (List<User>) query.execute(login);
+		List<User> results = (List<User>) query.execute(login);
 
-			return results.isEmpty();
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
-		}
+		return results.isEmpty();
 	}
 
 	@Override
@@ -67,18 +62,12 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			pm.currentTransaction().begin();
-			User user = new User(login, password);
-			Long id = pm.makePersistent(user).getId();
-			pm.currentTransaction().commit();
+		pm.currentTransaction().begin();
+		User user = new User(login, password);
+		Long id = pm.makePersistent(user).getId();
+		pm.currentTransaction().commit();
 
-			return id;
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
-		}
+		return id;
 	}
 
 	@Override
@@ -87,26 +76,20 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(User.class);
-			query.setFilter("login == loginParam");
-			query.declareParameters("String loginParam");
-			List<User> results = (List<User>) query.execute(login);
+		Query query = pm.newQuery(User.class);
+		query.setFilter("login == loginParam");
+		query.declareParameters("String loginParam");
+		List<User> results = (List<User>) query.execute(login);
 
-			if (results.isEmpty()) {
-				return -1L; //Value is important for JavaFX project
-			}
-
-			if (!password.equals(results.get(0).getPassword())) {
-				return -2L; //Value is important for JavaFX project
-			}
-
-			return results.get(0).getId();
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
+		if (results.isEmpty()) {
+			return -1L; // Value is important for JavaFX project
 		}
+
+		if (!password.equals(results.get(0).getPassword())) {
+			return -2L; // Value is important for JavaFX project
+		}
+
+		return results.get(0).getId();
 	}
 
 	@Override
@@ -115,16 +98,10 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(User.class);
-			List<User> results = (List<User>) query.execute();
+		Query query = pm.newQuery(User.class);
+		List<User> results = (List<User>) query.execute();
 
-			return results.size();
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
-		}
+		return results.size();
 	}
 
 }

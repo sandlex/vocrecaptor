@@ -1,21 +1,22 @@
 package com.vocrecaptor.web.server.servlet;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.FileItemIterator;
+import org.apache.commons.fileupload.FileItemStream;
+import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.fileupload.util.Streams;
 
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
 import com.vocrecaptor.web.server.utils.DictionaryFileUtil;
@@ -45,34 +46,33 @@ public class Upload extends HttpServlet {
 				return;
 			}
 
-			FileItemFactory factory = new DiskFileItemFactory();
-			ServletFileUpload upload = new ServletFileUpload(factory);
-			List items = upload.parseRequest(request);
+			ServletFileUpload upload = new ServletFileUpload();
 
 			DictionaryTransferObject dictionaryTO = new DictionaryTransferObject();
 			dictionaryTO.setIsPublic(false);
 
-			for (Iterator i = items.iterator(); i.hasNext();) {
-				FileItem item = (FileItem) i.next();
-
+			FileItemIterator iter = upload.getItemIterator(request);
+			while (iter.hasNext()) {
+				FileItemStream item = iter.next(); // http://commons.apache.org/fileupload/streaming.html
+				InputStream stream = item.openStream();
 				if (item.isFormField()) {
-
 					if ("user".equals(item.getFieldName())) {
-						dictionaryTO.setUser(new Long(item.getString()));
+						dictionaryTO
+								.setUser(new Long(Streams.asString(stream)));
 					}
 
 					if ("learningLanguage".equals(item.getFieldName())) {
-						dictionaryTO.setLearningLanguage(//new Long(
-								item.getString());
+						dictionaryTO.setLearningLanguage(Streams
+								.asString(stream));
 					}
 
 					if ("throughLanguage".equals(item.getFieldName())) {
-						dictionaryTO.setThroughLanguage(//new Long(
-								item.getString());
+						dictionaryTO.setThroughLanguage(Streams
+								.asString(stream));
 					}
 
 					if ("description".equals(item.getFieldName())) {
-						dictionaryTO.setDescription(item.getString());
+						dictionaryTO.setDescription(Streams.asString(stream));
 					}
 
 					if ("isPublic".equals(item.getFieldName())) {
@@ -80,8 +80,11 @@ public class Upload extends HttpServlet {
 					}
 
 				} else {
-					if (DictionaryFileUtil.isCorrectFormat(item.getInputStream()) && isAcceptableSize()) {
-						dictionaryTO.setFile(inputStreamToBytes(item.getInputStream()));
+					if (/*DictionaryFileUtil.isCorrectFormat(item
+							.openStream())
+							&& */isAcceptableSize()) {
+						dictionaryTO.setFile(inputStreamToBytes(item
+								.openStream()));
 					} else {
 						out.print("BADFORMAT");
 						out.close();
@@ -93,7 +96,16 @@ public class Upload extends HttpServlet {
 			request.getSession().setAttribute("dictionary", dictionaryTO);
 			response.sendRedirect("dictionaryService");
 
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
+			out.print("BADFORMAT");
+			out.close();
+			return;
+		} catch (IOException e) {
+			e.printStackTrace();
+			out.print("ERROR");
+			out.close();
+			return;
+		} catch (FileUploadException e) {
 			e.printStackTrace();
 			out.print("ERROR");
 			out.close();
@@ -101,21 +113,35 @@ public class Upload extends HttpServlet {
 		}
 	}
 
-	private byte[] inputStreamToBytes(InputStream inputStream) {
-		ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
+	private byte[] inputStreamToBytes(InputStream stream)
+			throws IOException, IllegalArgumentException {
+		//TODO Maybe use this approach
+		/*ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
 
-		try {
-			byte[] buffer = new byte[1024];
-			int len;
-			while ((len = inputStream.read(buffer)) >= 0) {
-				out.write(buffer, 0, len);
-			}
-
-			inputStream.close();
-			out.close();
-		} catch (Exception ex) {
-			ex.printStackTrace();
+		byte[] buffer = new byte[1024];
+		int len;
+		while ((len = inputStream.read(buffer)) >= 0) {
+			out.write(buffer, 0, len);
 		}
+
+		//inputStream.close();
+		out.close();
+
+		return out.toByteArray();*/
+		
+		BufferedReader inputStream = null;
+		inputStream = new BufferedReader(new InputStreamReader(stream));
+
+		String str;
+		ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
+		while ((str = inputStream.readLine()) != null) {
+			if ("".equals(str) || str.split("\\|").length != DictionaryFileUtil.WORD_PARTS) {
+				throw new IllegalArgumentException();
+			} else {
+				out.write(str.getBytes());
+			}
+		}
+		out.close();
 		return out.toByteArray();
 	}
 

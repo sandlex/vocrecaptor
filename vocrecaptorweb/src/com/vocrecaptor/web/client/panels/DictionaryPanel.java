@@ -58,8 +58,17 @@ public class DictionaryPanel extends Composite {
 		languagesPanel.add(throughLang);
 		table.setWidget(0, 1, languagesPanel);
 		
-		table.setWidget(1, 0, new Label("Dictionary file"));
-
+		table.setWidget(1, 0, new Label("Description"));
+		final TextBox description = new TextBox();
+		description.setName("description");
+		table.setWidget(1, 1, description);
+		
+		table.setWidget(2, 0, new Label("Is public"));
+		final CheckBox isPublic = new CheckBox();
+		isPublic.setName("isPublic");
+		table.setWidget(2, 1, isPublic);
+		
+		table.setWidget(3, 0, new Label("Dictionary file"));
 		HorizontalPanel filePanel = new HorizontalPanel();
 		Hidden user = new Hidden();
 		user.setName("user");
@@ -68,19 +77,8 @@ public class DictionaryPanel extends Composite {
 		FileUpload file = new FileUpload();
 		file.setName("file");
 		filePanel.add(file);
-		table.setWidget(1, 1, filePanel);		
-		
-		table.setWidget(2, 0, new Label("Description"));
+		table.setWidget(3, 1, filePanel);		
 
-		final TextBox description = new TextBox();
-		description.setName("description");
-		table.setWidget(2, 1, description);
-		
-		table.setWidget(3, 0, new Label("Is public"));
-		final CheckBox isPublic = new CheckBox();
-		isPublic.setName("isPublic");
-		table.setWidget(3, 1, isPublic);
-		
 		form.setWidget(table);
 		panel.add(form);
 		

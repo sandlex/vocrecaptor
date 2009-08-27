@@ -43,14 +43,16 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 			out.close();
 			return;
 		}
-		
+
 		if (request.getSession().getAttribute("dictionaryToGetCategories") != null) {
 			response.setContentType("text/xml");
-			out.print(processGetCategories(request, "dictionaryToGetCategories"));
+			out
+					.print(processGetCategories(request,
+							"dictionaryToGetCategories"));
 			out.close();
 			return;
 		}
-		
+
 		if (request.getSession().getAttribute("dictionaryToGetSessions") != null) {
 			response.setContentType("text/xml");
 			out.print(processGetSessions(request, "dictionaryToGetSessions"));
@@ -60,7 +62,9 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 
 		if (request.getSession().getAttribute("dictionaryToGetDictionary") != null) {
 			response.setContentType("text/xml");
-			out.print(processGetDictionary(request, "dictionaryToGetDictionary"));
+			out
+					.print(processGetDictionary(request,
+							"dictionaryToGetDictionary"));
 			out.close();
 			return;
 		}
@@ -72,22 +76,16 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			pm.currentTransaction().begin();
-			Dictionary dictionary = dictionaryDTOToDictionary(dictionaryTO);
-			// FIXME java.lang.IllegalArgumentException: file: byte[] properties
-			// must be 500 bytes or less. Instead, use
-			// com.google.appengine.api.datastore.Blob, which can store binary
-			// data of any size.
-			Long result = pm.makePersistent(dictionary).getId();
-			pm.currentTransaction().commit();
+		pm.currentTransaction().begin();
+		Dictionary dictionary = dictionaryDTOToDictionary(dictionaryTO);
+		// FIXME java.lang.IllegalArgumentException: file: byte[] properties
+		// must be 500 bytes or less. Instead, use
+		// com.google.appengine.api.datastore.Blob, which can store binary
+		// data of any size.
+		Long result = pm.makePersistent(dictionary).getId();
+		pm.currentTransaction().commit();
 
-			return result;
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
-		}
+		return result;
 	}
 
 	@Override
@@ -100,27 +98,19 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(Dictionary.class);
-			query.setFilter("user == userParam");
-			query.declareParameters("Long userParam");
+		Query query = pm.newQuery(Dictionary.class);
+		query.setFilter("user == userParam");
+		query.declareParameters("Long userParam");
 
-			List<Dictionary> dictionaries = (List<Dictionary>) query
-					.execute(user);
+		List<Dictionary> dictionaries = (List<Dictionary>) query.execute(user);
 
-			List<DictionaryTransferObject> result = new ArrayList<DictionaryTransferObject>(
-					dictionaries.size());
-			for (Dictionary dictionary : dictionaries) {
-				result.add(dictionaryToDTO(dictionary));
-			}
-
-			return result;
-		} finally {
-			// FIXME Check all these cases and remove rollback
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
+		List<DictionaryTransferObject> result = new ArrayList<DictionaryTransferObject>(
+				dictionaries.size());
+		for (Dictionary dictionary : dictionaries) {
+			result.add(dictionaryToDTO(dictionary));
 		}
+
+		return result;
 	}
 
 	@Override
@@ -129,16 +119,10 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(Dictionary.class);
-			List<Dictionary> results = (List<Dictionary>) query.execute();
+		Query query = pm.newQuery(Dictionary.class);
+		List<Dictionary> results = (List<Dictionary>) query.execute();
 
-			return results.size();
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
-		}
+		return results.size();
 	}
 
 	@Override
@@ -147,28 +131,22 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		PersistenceManager pm = PersistenceManagerHelper
 				.getPersistenceManager();
 
-		try {
-			Query query = pm.newQuery(Dictionary.class);
-			query.setFilter("id == idParam");
-			query.declareParameters("Long idParam");
+		Query query = pm.newQuery(Dictionary.class);
+		query.setFilter("id == idParam");
+		query.declareParameters("Long idParam");
 
-			List<Dictionary> dictionaries = (List<Dictionary>) query.execute(id);
-			//FIXME Ensure that there is only one object with such id
-			
-			List<DictionaryTransferObject> result = new ArrayList<DictionaryTransferObject>(
-					dictionaries.size());
-			for (Dictionary dictionary : dictionaries) {
-				result.add(dictionaryToDTO(dictionary));
-			}
+		List<Dictionary> dictionaries = (List<Dictionary>) query.execute(id);
+		// FIXME Ensure that there is only one object with such id
 
-			return result.get(0);
-		} finally {
-			if (pm.currentTransaction().isActive()) {
-				pm.currentTransaction().rollback();
-			}
+		List<DictionaryTransferObject> result = new ArrayList<DictionaryTransferObject>(
+				dictionaries.size());
+		for (Dictionary dictionary : dictionaries) {
+			result.add(dictionaryToDTO(dictionary));
 		}
+
+		return result.get(0);
 	}
-	
+
 	private DictionaryTransferObject dictionaryToDTO(Dictionary dictionary) {
 		return new DictionaryTransferObject(dictionary.getId(), dictionary
 				.getUser(), dictionary.getLearningLanguage(), dictionary
@@ -183,62 +161,63 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 						.getThroughLanguage(), dictionary.getIsPublic(),
 				dictionary.getDescription(), dictionary.getFile());
 	}
-	
-	
+
 	private Object processCreateDictionary(HttpServletRequest request) {
 		DictionaryTransferObject dictionaryTO = (DictionaryTransferObject) request
-		.getSession().getAttribute("dictionary");
+				.getSession().getAttribute("dictionary");
+		System.out.println("+++++++++++++++++++++++++ Why not all records?" + dictionaryTO.getFile().length);
 		request.getSession().removeAttribute("dictionary");
-		
+
 		return create(dictionaryTO);
 	}
-	
-	private Object processGetDictionaries(HttpServletRequest request, String attr) {
+
+	private Object processGetDictionaries(HttpServletRequest request,
+			String attr) {
 		String userId = (String) request.getSession().getAttribute(attr);
 		request.getSession().removeAttribute(attr);
-		
-		List<DictionaryTransferObject> dictionaries = getByUser(Long.valueOf(userId));
+
+		List<DictionaryTransferObject> dictionaries = getByUser(Long
+				.valueOf(userId));
 		StringBuffer result = new StringBuffer();
-		
-        if (dictionaries.size() > 0) {
-        	result.append("<list>");
-            for (DictionaryTransferObject dictionary : dictionaries) {
-            	result.append("<dict><id>");
-            	result.append(dictionary.getId());
-            	result.append("</id><desc>");
-            	result.append(dictionary.getDescription());
-            	result.append("</desc></dict>");
-    		}
-            result.append("</list>");
-        } else {
-        	result.append("empty");
-        }
+
+		if (dictionaries.size() > 0) {
+			result.append("<list>");
+			for (DictionaryTransferObject dictionary : dictionaries) {
+				result.append("<dict><id>");
+				result.append(dictionary.getId());
+				result.append("</id><desc>");
+				result.append(dictionary.getDescription());
+				result.append("</desc></dict>");
+			}
+			result.append("</list>");
+		} else {
+			result.append("empty");
+		}
 
 		return result.toString();
 	}
 
-	private Object processGetCategories(HttpServletRequest request,
-			String attr) {
+	private Object processGetCategories(HttpServletRequest request, String attr) {
 		return getParametersAsString("categories", request, attr);
 	}
 
 	private Object processGetSessions(HttpServletRequest request, String attr) {
 		return getParametersAsString("sessions", request, attr);
 	}
-	
-	private Object getParametersAsString(String type, HttpServletRequest request,
-			String attr) {
-		
+
+	private Object getParametersAsString(String type,
+			HttpServletRequest request, String attr) {
+
 		String dictId = (String) request.getSession().getAttribute(attr);
 		request.getSession().removeAttribute(attr);
-		
+
 		DictionaryTransferObject dictionary = get(Long.valueOf(dictId));
-		
+
 		StringBuffer result = new StringBuffer();
-		
+
 		List<String> parameters;
-		
-		//FIXME Add enum
+
+		// FIXME Add enum
 		if ("categories".equals(type)) {
 			parameters = DictionaryFileUtil.getCategories(dictionary);
 		} else if ("sessions".equals(type)) {
@@ -246,54 +225,53 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		} else {
 			throw new IllegalArgumentException();
 		}
-		
-        if (parameters.size() > 0) {
-        	
-            result.append("<l>");
-            for (String value : parameters) {
-            	result.append("<v>");
-            	result.append(value);
-            	result.append("</v>");
+
+		if (parameters.size() > 0) {
+
+			result.append("<l>");
+			for (String value : parameters) {
+				result.append("<v>");
+				result.append(value);
+				result.append("</v>");
 			}
-            result.append("</l>");
-        } else {
-        	result.append("empty");
-        }
+			result.append("</l>");
+		} else {
+			result.append("empty");
+		}
 
 		return result.toString();
 	}
-	
-	private Object processGetDictionary(HttpServletRequest request,
-			String attr) {
+
+	private Object processGetDictionary(HttpServletRequest request, String attr) {
 		String dictId = (String) request.getSession().getAttribute(attr);
 		request.getSession().removeAttribute(attr);
-		
+
 		DictionaryTransferObject dictionary = get(Long.valueOf(dictId));
-		
+
 		StringBuffer result = new StringBuffer();
-		
+
 		List<WordBean> words = DictionaryFileUtil.getWords(dictionary);
-		
-        if (words.size() > 0) {
-        	
-            result.append("<dc>");
-            for (WordBean word : words) {
-            	result.append("<w><d>");
-            	result.append(word.getDefinition());
-            	result.append("</d>");
-            	result.append("<t>");
-            	result.append(word.getTranslation());
-            	result.append("</t>");
-            	result.append("<e>");
-            	result.append(word.getExample());
-            	result.append("</e></w>");
+
+		if (words.size() > 0) {
+
+			result.append("<dc>");
+			for (WordBean word : words) {
+				result.append("<w><d>");
+				result.append(word.getDefinition());
+				result.append("</d>");
+				result.append("<t>");
+				result.append(word.getTranslation());
+				result.append("</t>");
+				result.append("<e>");
+				result.append(word.getExample());
+				result.append("</e></w>");
 			}
-            result.append("</dc>");
-        } else {
-        	result.append("empty");
-        }
+			result.append("</dc>");
+		} else {
+			result.append("empty");
+		}
 
 		return result.toString();
 	}
-	
+
 }
