@@ -1,11 +1,8 @@
 package com.vocrecaptor.web.server.servlet;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
@@ -21,6 +18,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
+import com.vocrecaptor.web.server.utils.DictionaryFileUtil;
 
 public class Upload extends HttpServlet {
 
@@ -82,7 +80,7 @@ public class Upload extends HttpServlet {
 					}
 
 				} else {
-					if (isCorrectFormat(item.getInputStream()) && isAcceptableSize()) {
+					if (DictionaryFileUtil.isCorrectFormat(item.getInputStream()) && isAcceptableSize()) {
 						dictionaryTO.setFile(inputStreamToBytes(item.getInputStream()));
 					} else {
 						out.print("BADFORMAT");
@@ -92,7 +90,6 @@ public class Upload extends HttpServlet {
 				}
 			}
 
-			System.out.println(request.getSession().getId());
 			request.getSession().setAttribute("dictionary", dictionaryTO);
 			response.sendRedirect("dictionaryService");
 
@@ -124,45 +121,6 @@ public class Upload extends HttpServlet {
 
 	private boolean isAcceptableSize() {
 		// TODO Ensure and check size limit (5Mb)
-		return true;
-	}
-
-	/**
-	 * Checks if the storage file specified has a correct format.
-	 * 
-	 * @param file
-	 *            file to check
-	 * @return true if all lines consists of WORD_PARTS=5 parts
-	 */
-	private final int WORD_PARTS = 5;
-
-	// TODO Sync with Vocrecaptorswing
-	private boolean isCorrectFormat(InputStream stream) {
-		BufferedReader inputStream = null;
-		try {
-			inputStream = new BufferedReader(new InputStreamReader(stream));
-
-			String str;
-			while ((str = inputStream.readLine()) != null) {
-
-				if ("".equals(str) || str.split("\\|").length != WORD_PARTS) {
-					return false;
-				}
-			}
-		} catch (FileNotFoundException ex) {
-			ex.printStackTrace();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		} finally {
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (IOException ex) {
-					ex.printStackTrace();
-				}
-			}
-		}
-
 		return true;
 	}
 

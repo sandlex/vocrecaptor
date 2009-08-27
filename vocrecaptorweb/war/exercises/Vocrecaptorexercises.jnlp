@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase="http://localhost:8082/servlet/org.netbeans.modules.javafx.project.JnlpDownloadServlet/C%3A/projects/vocrecaptor/workspace/vocrecaptorexercises/dist/" href="Vocrecaptorexercises.jnlp">
+<jnlp spec="1.0+" codebase="http://localhost:8082/servlet/org.netbeans.modules.javafx.project.JnlpDownloadServlet/C%3A/projects/vocrecaptor/workspace/vocrecaptorexercises/dist/" href="Vocrecaptor.jnlp">
     <information>
-        <title>Vocrecaptorexercises</title>
+        <title>Vocrecaptor</title>
         <vendor>Alexey Peskov</vendor>
         <homepage href="http://localhost:8082/servlet/org.netbeans.modules.javafx.project.JnlpDownloadServlet/C%3A/projects/vocrecaptor/workspace/vocrecaptorexercises/dist/"/>
-        <description>Vocrecaptorexercises</description>
+        <description>Vocrecaptor</description>
         <offline-allowed/>
         <shortcut>
             <desktop/>
@@ -16,7 +16,7 @@
     <resources>
         <j2se version="1.5+"/>
         <extension name="JavaFX Runtime" href="http://dl.javafx.com/1.1/javafx-rt.jnlp"/>
-        <jar href="Vocrecaptorexercises.jar" main="true"/>
+        <jar href="Vocrecaptor.jar" main="true"/>
     </resources>
     <application-desc main-class="com.vocrecaptor.fx.Main">
     </application-desc>

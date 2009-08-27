@@ -18,4 +18,6 @@ public interface DictionaryService extends RemoteService {
 	Long delete(DictionaryTransferObject dictionary);
 	
 	Integer count();
+	
+	DictionaryTransferObject get(Long id);
 }

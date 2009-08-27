@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.vocrecaptor.web.client.remote.UserService;
@@ -32,11 +31,7 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 			HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 			
-		System.out.println(request.getSession().getId());
-		System.out.println(request.getAttribute("sessionId"));
-		//FIXME We have different sessions here and cannot get an object thus
 		UserTransferObject userTO = (UserTransferObject) request.getSession().getAttribute("userToLogin");
-		System.out.println(userTO.getLogin() + ":" + userTO.getPassword());
 		request.getSession().removeAttribute("userToLogin");
 		
 		out.print(find(userTO.getLogin(), userTO.getPassword()));
@@ -99,11 +94,11 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 			List<User> results = (List<User>) query.execute(login);
 
 			if (results.isEmpty()) {
-				return -1L;
+				return -1L; //Value is important for JavaFX project
 			}
 
 			if (!password.equals(results.get(0).getPassword())) {
-				return -2L;
+				return -2L; //Value is important for JavaFX project
 			}
 
 			return results.get(0).getId();

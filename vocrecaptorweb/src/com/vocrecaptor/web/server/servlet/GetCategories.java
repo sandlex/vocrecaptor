@@ -15,13 +15,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.vocrecaptor.web.client.remote.transferobjects.UserTransferObject;
+public class GetCategories extends AbstractServiceServlet {
 
-public class Login extends AbstractServiceServlet {
-
-	private static final long serialVersionUID = 3395192490485196922L;
-
+	//TODO Somehow unite with GetSessions
 	
+	private static final long serialVersionUID = -6537639050669155701L;
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,20 +41,17 @@ public class Login extends AbstractServiceServlet {
 			e.printStackTrace();
 		}
 
-		String login = "";
-		String password = "";
+		String dictId = "";
 		
 		NodeList fields = xmlDoc.getElementsByTagName("field");
         for (int i = 0; i < fields.getLength(); i++) {
         	Node field = fields.item(i);
         	String fieldName = field.getAttributes().getNamedItem("name").getTextContent();
-        	if ("login".equals(fieldName)) login = field.getTextContent();
-        	if ("password".equals(fieldName)) password = field.getTextContent();
+        	if ("dictId".equals(fieldName)) dictId = field.getTextContent();
         }
         
-        UserTransferObject userTO = new UserTransferObject(login, password);
-		request.getSession().setAttribute("userToLogin", userTO);
-		response.sendRedirect(response.encodeURL("userService"));
+		request.getSession().setAttribute("dictionaryToGetCategories", dictId);
+		response.sendRedirect(response.encodeURL("dictionaryService"));
 	}
-
+	
 }

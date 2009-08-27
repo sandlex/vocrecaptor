@@ -61,16 +61,47 @@
     <url-pattern>/vocrecaptorweb/login</url-pattern>
   </servlet-mapping>
 
-<!-- 
   <servlet>
-    <servlet-name>dictionaryListGetter</servlet-name>
-    <servlet-class>com.vocrecaptor.gwt.server.servlet.fx.DictionaryListGetter</servlet-class>
+    <servlet-name>getDictionaries</servlet-name>
+    <servlet-class>com.vocrecaptor.web.server.servlet.GetDictionaries</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>dictionaryListGetter</servlet-name>
-    <url-pattern>/vocrecaptorgwt/dictionaryListGetter</url-pattern>
+    <servlet-name>getDictionaries</servlet-name>
+    <url-pattern>/vocrecaptorweb/getDictionaries</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getCategories</servlet-name>
+    <servlet-class>com.vocrecaptor.web.server.servlet.GetCategories</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getCategories</servlet-name>
+    <url-pattern>/vocrecaptorweb/getCategories</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getSessions</servlet-name>
+    <servlet-class>com.vocrecaptor.web.server.servlet.GetSessions</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getSessions</servlet-name>
+    <url-pattern>/vocrecaptorweb/getSessions</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getDictionary</servlet-name>
+    <servlet-class>com.vocrecaptor.web.server.servlet.GetDictionary</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getDictionary</servlet-name>
+    <url-pattern>/vocrecaptorweb/getDictionary</url-pattern>
+  </servlet-mapping>
+
+<!-- 
   
   <servlet>
     <servlet-name>dictionaryGetter</servlet-name>

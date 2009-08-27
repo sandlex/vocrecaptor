@@ -14,4 +14,6 @@ public interface DictionaryServiceAsync {
 	void delete(DictionaryTransferObject dictionary, AsyncCallback<Long> callback);
 
 	void count(AsyncCallback<Integer> callback);
+
+	void get(Long id, AsyncCallback<DictionaryTransferObject> callback);
 }
