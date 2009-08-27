@@ -10,7 +10,7 @@ public class DictionaryBean {
     /**
      * Dictionary id.
      */
-    public var id: Integer;
+    public var id: Long;
 
     /**
      * Dictionary description.

@@ -69,10 +69,10 @@ public class LoginPanel extends AbstractPanel {
                                         password: password.text
                                         parent: instance
                                         parentPanel: this
-                                        onComplete: function(value: String) : Void {
-                                            if (value != "false") {
+                                        onComplete: function(value: Long) : Void {
+                                            if (value >= 0) {
                                                 controller.signIn(UserBean {
-                                                    id: Integer.parseInt(value);
+                                                    id: value.intValue();
                                                     login: login.text;
                                                 })
                                             } else { // If exception during connecting

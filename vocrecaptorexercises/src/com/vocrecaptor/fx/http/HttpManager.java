@@ -46,7 +46,7 @@ public class HttpManager {
      * @throws java.lang.Exception
      */
     static public String getDictionaryList(int userId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/dictionaryListGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/getDictionaries",
                 "<fields><field name=\"userId\">" + userId + "</field></fields>");
     }
 
@@ -63,7 +63,7 @@ public class HttpManager {
      */
     static public String getWordList(int userId, int dictId,
             String category, String session) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/dictionaryGetter",
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/getDictionary",
                 "<fields><field name=\"userId\">" + userId + "</field>" +
                 "<field name=\"dictId\">" + dictId + "</field>" +
                 "<field name=\"category\">" + category + "</field>" +
@@ -78,11 +78,9 @@ public class HttpManager {
      * @return xml-string containing sessions
      * @throws java.lang.Exception
      */
-    static public String getSessionList(int userId, int dictId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/categoryOrSessionListGetter",
-                "<fields><field name=\"userId\">" + userId + "</field>" +
-                "<field name=\"dictId\">" + dictId + "</field>" +
-                "<field name=\"attr\">s</field></fields>");
+    static public String getSessionList(long dictId) throws Exception {
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/getSessions",
+                "<fields><field name=\"dictId\">" + dictId + "</field></fields>");
     }
 
     /**
@@ -93,11 +91,9 @@ public class HttpManager {
      * @return xml-string containing categories
      * @throws java.lang.Exception
      */
-    static public String getCategoryList(int userId, int dictId) throws Exception {
-        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/categoryOrSessionListGetter",
-                "<fields><field name=\"userId\">" + userId + "</field>" +
-                "<field name=\"dictId\">" + dictId + "</field>" +
-                "<field name=\"attr\">c</field></fields>");
+    static public String getCategoryList(long dictId) throws Exception {
+        return performHttpPostRequest(SERVER_URL + "/vocrecaptorweb/getCategories",
+                "<fields><field name=\"dictId\">" + dictId + "</field></fields>");
     }
 
     /**
@@ -147,7 +143,6 @@ public class HttpManager {
         try {
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
-                System.out.println(line);
             }
         } catch (IOException e) {
             e.printStackTrace();

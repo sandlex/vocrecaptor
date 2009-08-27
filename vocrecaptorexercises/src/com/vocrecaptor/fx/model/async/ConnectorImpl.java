@@ -38,16 +38,17 @@ public class ConnectorImpl extends AbstractAsyncOperation  {
     /**
      * Performs call of http request and returns a response.
      * 
-     * @return String object containing server response
+     * @return Long object containing user id or an error code -1L if login is not found
+     * or -2L if password is incorrect
      */
     @Override
     public Object call() {
 
-        String result = "false";
+        Long result = -1L;
         try {
-            result = HttpManager.authorize(login, password);
+            result = Long.valueOf(HttpManager.authorize(login, password));
         } catch (Exception e) {
-            result = "false";
+            result = -1L;
         }
 
         return result;

@@ -69,11 +69,11 @@ public class AccountPanel extends AbstractPanel {
                                 model.dict = dicts[dicBox.selectedIndex];
                                 categs =
                                     XmlUtil{
-                                    }.parseListXmlString(HttpManager.getCategoryList(model.user.id, dicts[dicBox.selectedIndex].id));
+                                    }.parseListXmlString(HttpManager.getCategoryList(dicts[dicBox.selectedIndex].id));
 
                                 sessns =
                                     XmlUtil{
-                                    }.parseListXmlString(HttpManager.getSessionList(model.user.id, dicts[dicBox.selectedIndex].id));
+                                    }.parseListXmlString(HttpManager.getSessionList(dicts[dicBox.selectedIndex].id));
                             }
                         }
                         content: [

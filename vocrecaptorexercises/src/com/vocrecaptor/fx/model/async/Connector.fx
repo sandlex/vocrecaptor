@@ -34,7 +34,7 @@ public class Connector extends AbstractAsyncOperation {
     /**
      * Function to run on asynchronous operation completion.
      */
-    public var onComplete: function(value: String): Void;
+    public var onComplete: function(value: Long): Void;
 
     /**
      * Connector implementation.
@@ -59,7 +59,7 @@ public class Connector extends AbstractAsyncOperation {
      * is completed.
      */
     protected override function onCompletion(value: Object) : Void {
-        onComplete(value as String);
+        onComplete(value as Long);
     }
 
     /**
