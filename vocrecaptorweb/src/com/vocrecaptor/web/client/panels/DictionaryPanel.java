@@ -88,6 +88,8 @@ public class DictionaryPanel extends Composite {
 					ErrorNotifier.showError(ErrorNotifier.SOMETHING_WENT_WRONG);
 				} else if(arg0.getResults().contains("BADFORMAT")) {
 					ErrorNotifier.showError(ErrorNotifier.WRONG_FILE_FORMAT);
+				} else if(arg0.getResults().contains("TOLARGE")) {
+					ErrorNotifier.showError(ErrorNotifier.DICTIONARY_FILE_IS_TOO_LARGE);
 				} else {
 					dialog.hide();
 					parent.updateDictionaries();

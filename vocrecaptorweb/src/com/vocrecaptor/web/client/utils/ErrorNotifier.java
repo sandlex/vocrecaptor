@@ -8,6 +8,7 @@ public class ErrorNotifier {
 	
 	public static final String SOMETHING_WENT_WRONG = "Error. Something went wrong";
 	public static final String WRONG_FILE_FORMAT = "Wrong file format cannot be uploaded";
+	public static final String DICTIONARY_FILE_IS_TOO_LARGE = "Dictionary file is too large (about 900Kb) for this GAE quota rules";
 	
 	static public void showError(String message) {
 		RootPanel.get("error").add(new HTML("<font style=\"background: #FFF1A8; padding-left: 5px; padding-right: 5px;\">" + message + "</font>"));

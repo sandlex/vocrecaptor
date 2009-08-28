@@ -110,11 +110,15 @@ public class Upload extends HttpServlet {
 			out.print("ERROR");
 			out.close();
 			return;
+		} catch (IllegalStateException e) {
+			out.print("TOLARGE");
+			out.close();
+			return;
 		}
 	}
 
 	private byte[] inputStreamToBytes(InputStream stream)
-			throws IOException, IllegalArgumentException {
+			throws IOException, IllegalArgumentException, IllegalStateException {
 		//TODO Maybe use this approach
 		/*ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
 
@@ -133,14 +137,23 @@ public class Upload extends HttpServlet {
 		inputStream = new BufferedReader(new InputStreamReader(stream));
 
 		String str;
-		ByteArrayOutputStream out = new ByteArrayOutputStream(1024);
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		StringBuffer buffer = new StringBuffer();
 		while ((str = inputStream.readLine()) != null) {
 			if ("".equals(str) || str.split("\\|").length != DictionaryFileUtil.WORD_PARTS) {
 				throw new IllegalArgumentException();
 			} else {
-				out.write(str.getBytes());
+				buffer.append(str);
+				buffer.append("\n");
 			}
 		}
+		out.write(buffer.toString().getBytes());
+		
+		//GAE free limit is 1Mb per object
+		if (buffer.toString().getBytes().length > 900000) {
+			throw new IllegalStateException();
+		}
+		
 		out.close();
 		return out.toByteArray();
 	}

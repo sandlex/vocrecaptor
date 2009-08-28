@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.api.datastore.Blob;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.vocrecaptor.web.client.remote.DictionaryService;
 import com.vocrecaptor.web.client.remote.transferobjects.DictionaryTransferObject;
@@ -78,10 +79,6 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 
 		pm.currentTransaction().begin();
 		Dictionary dictionary = dictionaryDTOToDictionary(dictionaryTO);
-		// FIXME java.lang.IllegalArgumentException: file: byte[] properties
-		// must be 500 bytes or less. Instead, use
-		// com.google.appengine.api.datastore.Blob, which can store binary
-		// data of any size.
 		Long result = pm.makePersistent(dictionary).getId();
 		pm.currentTransaction().commit();
 
@@ -151,7 +148,7 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		return new DictionaryTransferObject(dictionary.getId(), dictionary
 				.getUser(), dictionary.getLearningLanguage(), dictionary
 				.getThroughLanguage(), dictionary.getIsPublic(), dictionary
-				.getDescription(), dictionary.getFile());
+				.getDescription(), dictionary.getFile().getBytes());
 	}
 
 	private Dictionary dictionaryDTOToDictionary(
@@ -159,13 +156,13 @@ public class DictionaryServiceImpl extends RemoteServiceServlet implements
 		return new Dictionary(dictionary.getId(), dictionary.getUser(),
 				dictionary.getLearningLanguage(), dictionary
 						.getThroughLanguage(), dictionary.getIsPublic(),
-				dictionary.getDescription(), dictionary.getFile());
+				dictionary.getDescription(), new Blob(dictionary.getFile()));
 	}
 
 	private Object processCreateDictionary(HttpServletRequest request) {
 		DictionaryTransferObject dictionaryTO = (DictionaryTransferObject) request
 				.getSession().getAttribute("dictionary");
-		System.out.println("+++++++++++++++++++++++++ Why not all records?" + dictionaryTO.getFile().length);
+		
 		request.getSession().removeAttribute("dictionary");
 
 		return create(dictionaryTO);

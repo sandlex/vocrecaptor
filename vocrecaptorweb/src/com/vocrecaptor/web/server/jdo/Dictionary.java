@@ -6,6 +6,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.google.appengine.api.datastore.Blob;
+
 /**
  * Class represents a dictionary entity.
  * 
@@ -34,11 +36,13 @@ public class Dictionary {
 	private String description;
 	
 	@Persistent
-	private byte[] file;
+	private Blob file;
+	//private byte[] file_;
+	
 
 	public Dictionary(Long id, Long user, String learningLanguage,
 			String throughLanguage, Boolean isPublic, String description,
-			byte[] file) {
+			Blob file) {
 		this.id = id;
 		this.user = user;
 		this.learningLanguage = learningLanguage;
@@ -92,11 +96,11 @@ public class Dictionary {
 		this.description = description;
 	}
 
-	public byte[] getFile() {
+	public Blob getFile() {
 		return file;
 	}
 
-	public void setFile(byte[] file) {
+	public void setFile(Blob file) {
 		this.file = file;
 	}
 
