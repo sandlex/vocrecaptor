@@ -22,12 +22,15 @@ Let's assume you are reading a book on a language you are studying (for example 
 
 ===Starting Vocrecaptor Editor===
 To run the Vocrecaptor from the command line, go to the dist folder and type the following: `java -jar "vocrecaptoreditor-v1.2.1.jar"` where v1.2.1 is the current version number. You can also execute the program by double clicking on the jar-file. The program icon will appear in a system tray:<br>
-<img src="images/en/systemtray.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDrs1XVL6I/AAAAAAAAC6o/7vW0Fts2GKc/s800/systemtray.jpg
+<br><br>
 After a double click on the icon the `Program manager` window will appear:<br>
-<img src="images/en/programmanager_wordsmanager.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDr8Q_0rqI/AAAAAAAAC6s/vCPbeRaPLSQ/s800/programmanager_wordsmanager.jpg
+<br><br>
 ===Opening an existing storage===
 To open existing dictionary press `...` button and choose a dictionary file. If a format of the specified file is incorrect the message will appear:<br>
-<img src="images/en/storagedoesnotexists.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDsWUvg_KI/AAAAAAAAC6w/tvkiFWi11WY/s800/storagedoesnotexists.jpg
+<br><br>
 ===Creating a new storage===
 In this case you should create a new dictionary (storage). To do this press `New...` button and in opened standard `File save dialog` specify storage path, file name and file extension (you may use `.txt` or whatever you like):<br> 
 <img src="images/en/createdictionary.jpg"><br><br>
