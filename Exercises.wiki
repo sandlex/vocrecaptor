@@ -6,12 +6,12 @@ to refresh the words you've learned in your mind.<br>
  * [Exercises#Starting_exercises Starting exercises]
  * [Exercises#Logging_in Logging in]
  * [Exercises#Account_panel Account panel]
- * [Exercises#Exercise_"Cards" Exercise "Cards"]
- * [Exercises#Exercise_"Definition guessing" Exercise "Definition guessing"]
+ * [Exercises#Exercise_"Cards_Exercise "Cards"]
+ * [Exercises#Exercise_"Definition_guessing" Exercise "Definition guessing"]
  * [Exercises#Exercise_"Writing" Exercise "Writing"]
- * [Exercises#Exercise_"Definition choosing" Exercise "Definition choosing"]
- * [Exercises#Exercise_"Translation guessing" Exercise "Translation guessing"]
- * [Exercises#Exercise_"Translation choosing" Exercise "Translation choosing"]
+ * [Exercises#Exercise_"Definition_choosing" Exercise "Definition choosing"]
+ * [Exercises#Exercise_"Translation_guessing" Exercise "Translation guessing"]
+ * [Exercises#Exercise_"Translation_choosing" Exercise "Translation choosing"]
  * [Exercises#Exercise_"Mosaic" Exercise "Mosaic"]
 
 ===Starting exercises===
