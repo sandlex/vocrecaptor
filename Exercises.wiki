@@ -41,13 +41,13 @@ Choose a dictionary you want to exercise and press `Exercise` button. You will l
                                 Definition choosing, Translation guessing, Translation choosing and Mosaic.<br>To stop exercising and go back to
                                 account panel press `<<` button.
 <br><br>
-===Exercise "Cards"===
+===Exercise Cards===
                                 <img src="images/en/exercises/cards.png"><br><br>
                                 Carefully read the word (the first one) and its translation (the second one) and try to remember them.
                                 After this press `Next >>` button (or press `Space` on your keyboard while `Next >>` button is focused). You'll see the next pair of words. Remember them and so force.
                                 Do this for each word from this group.
 <br><br>
-===Exercise "Definition guessing"===
+===Exercise Definition guessing===
                                 <img src="images/en/exercises/definitionguessing.png"><br><br>
                                 After the window opening the countdown timer is started and you have 5 seconds to remember the definition of the word given. 
                                 If you remember it press `Remember` button, timer will stop and after 1 seconds the next word will be shown.
@@ -60,22 +60,22 @@ Choose a dictionary you want to exercise and press `Exercise` button. You will l
                                 To give you answer press `Answer` button. If you've entered the word correctly you'll get the next word to write, otherwise you'll get a message that your word is not correctly spelled.<br>
                                 Pay you attention that you can guess the word structure by structure of the word masked with asteriks `*`. 
 <br><br>
-===Exercise "Definition choosing"===
+===Exercise Definition choosing===
                                 <img src="images/en/exercises/definisionchoosing.png"><br><br>
                                 In this exercise a translation is placed at the top of the window. All definitions are given as buttons. You have to choose a correspondent definition by pressing buttons.
                                 If the pair "definition-translation" is correct you'll get the next word to choose, otherwise you'll get nothing. Try again.
 <br><br>
-===Exercise "Translation guessing"===
+===Exercise Translation guessing===
                                 <img src="images/en/exercises/translationguessing.png"><br><br>    
                                 After the window opening the countdown timer is started and you have 5 seconds to remember the translation of the word given. 
                                 If you remember it press `Remember` button, timer will stop and after 1 seconds the next word will be shown.
 <br><br>
-===Exercise "Translation choosing"===
+===Exercise Translation choosing===
                                 <img src="images/en/exercises/translationchoosing.png"><br><br>
                                 In this exercise a definition is placed at the top of the window. All translation are given as buttons. You have to choose a correspondent translation by pressing buttons.
                                 If the pair "definition-translation" is correct you'll get the next word to choose, otherwise you'll get nothing. Try again.
 <br><br>
-===Exercise "Mosaic"===
+===Exercise Mosaic===
                                 <img src="images/en/exercises/mosaic.png"><br><br>
                                 In the last exercise you have to match definitions and translations of all words from current group.
                                 At the left-hand column there are words arranged randomly, at the right-hand column - translations. You have to match all the pairs by pressing
