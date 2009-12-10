@@ -6,7 +6,7 @@ to refresh the words you've learned in your mind.<br>
  * [Exercises#Starting_exercises Starting exercises]
  * [Exercises#Logging_in Logging in]
  * [Exercises#Account_panel Account panel]
- * [Exercises#Exercise_Cards_Exercise "Cards"]
+ * [Exercises#Exercise_Cards Exercise "Cards"]
  * [Exercises#Exercise_Definition_guessing Exercise "Definition guessing"]
  * [Exercises#Exercise_Writing Exercise "Writing"]
  * [Exercises#Exercise_Definition_choosing Exercise "Definition choosing"]
