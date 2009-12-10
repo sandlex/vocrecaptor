@@ -6,13 +6,13 @@ to refresh the words you've learned in your mind.<br>
  * [Exercises#Starting_exercises Starting exercises]
  * [Exercises#Logging_in Logging in]
  * [Exercises#Account_panel Account panel]
- * [Exercises#Exercise_"Cards_Exercise "Cards"]
- * [Exercises#Exercise_"Definition_guessing" Exercise "Definition guessing"]
- * [Exercises#Exercise_"Writing" Exercise "Writing"]
- * [Exercises#Exercise_"Definition_choosing" Exercise "Definition choosing"]
- * [Exercises#Exercise_"Translation_guessing" Exercise "Translation guessing"]
- * [Exercises#Exercise_"Translation_choosing" Exercise "Translation choosing"]
- * [Exercises#Exercise_"Mosaic" Exercise "Mosaic"]
+ * [Exercises#Exercise_Cards_Exercise "Cards"]
+ * [Exercises#Exercise_Definition_guessing Exercise "Definition guessing"]
+ * [Exercises#Exercise_Writing Exercise "Writing"]
+ * [Exercises#Exercise_Definition_choosing Exercise "Definition choosing"]
+ * [Exercises#Exercise_Translation_guessing Exercise "Translation guessing"]
+ * [Exercises#Exercise_Translation_choosing Exercise "Translation choosing"]
+ * [Exercises#Exercise_Mosaic Exercise "Mosaic"]
 
 ===Starting exercises===
 To start exercising you can click one of the `Launch applet` or `Launch application` buttons on the left-hand of this page,
