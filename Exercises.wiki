@@ -1,3 +1,4 @@
+#labels Featured
 ==What is Vocrecaptor Exercises?==
 Vocrecaptor Exercises is a JavaFX application that allows you to do exercises on dictionaries created in Vocrecaptor Editor and uploaded to Vocrecaptor Web site. By its JavaFX nature application can be used as a web-browser applet, desktop application or from some mobile devices supporting JavaFX technology.
 Vocrecaptor Exercises will help you to study words from your dictionary more carefully and memorize them better. You can also do exercises
