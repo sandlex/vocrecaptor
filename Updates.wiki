@@ -1,7 +1,6 @@
 ==October 8, 2009==
 Vocrecaptor Exercises v1.2.0:
- * In exercises "Definition guessing" and "Translation guessing" if user doesn't press "Remember" button 
-within 5 seconds the button changes its caption to "Next >>" and the next word will be shown not in a one second but only when user hits this button
+ * In exercises "Definition guessing" and "Translation guessing" if user doesn't press "Remember" button within 5 seconds the button changes its caption to "Next >>" and the next word will be shown not in a one second but only when user hits this button
  * In "Writing" exercise buttons "Answer" and "Check" bound to keyboard hotkeys Enter and F1 correspondingly
 
 ==October 7, 2009==
