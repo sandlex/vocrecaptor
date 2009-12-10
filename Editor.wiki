@@ -39,7 +39,7 @@ click on `Words editor`:<br>
 <img src="images/en/startwordseditor.jpg"><br><br>
 If dictionary file is not set the notification window will appear:<br>
 <img src="images/en/dictionaryisnotset.jpg"><br><br>
-In this case you have to open the `Program manager` and specify a dictionary file (<a href="#openstorage">?</a>). If dictionary file was set correctly the `Editor` window will appear:<br>
+In this case you have to open the `Program manager` and specify a dictionary file ([Editor#Opening_an_existing_storage ?]). If dictionary file was set correctly the `Editor` window will appear:<br>
 <img src="images/en/editor.jpg"><br><br>
 ===Using sessions===
 Each time you open an editor window the new session is started. During this
@@ -126,7 +126,7 @@ opened windows:<br>
 ===Setting recap list===
 As you can see from the message in this window to start recaping you should
 specify the word list. Switch back to the `Program manager` window
-and press `Set for recap` button (<a href="#viewrecapwordslist">?</a>).<br>
+and press `Set for recap` button ([Editor#Previewing_the_word_list ?]).<br>
 The `Recap` window will start periodically display the words from 
 the list: firstly definition, secondly translation and then 
 example of usage if it exists.<br>
@@ -144,8 +144,8 @@ do it here as well.<br>
 ===Exporting recap list to a file===
 The `Program manager` allows to export currently recaping word list
 to file (for printing). To do this switch to the `Words manager` tab
-of the `Program manager` and press `Export list...` (<a href="#viewrecapwordslist">?</a>).<br>
-Note, that the `Export list...` button is enabled only if recap list is set (<a href="#settingrecaplist">?</a>).
+of the `Program manager` and press `Export list...` ([Editor#Previewing_the_word_list ?]).<br>
+Note, that the `Export list...` button is enabled only if recap list is set ([Editor#Setting_recap_list ?]).
 Press this button and enter a file name where you want to save word list to:<br>
 <img src="images/en/exportlist.jpg"><br><br>
 After the export operation completed you will get a notification message
