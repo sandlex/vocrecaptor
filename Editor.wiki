@@ -61,7 +61,7 @@ lesson you will make it easy if you remember the date and time of that
 session.<br>
 Each time you start editor window you will be asked whether you want to continue
 a previous session or start a new one:<br>
-http://picasaweb.google.ru/lh/photo/VQm_bMBrZLWAcWNm1nANVg?feat=embedwebsite"><img src="http://lh5.ggpht.com/_qJbawSsK7rw/SyDvblxWLZI/AAAAAAAAC8M/PZ5tCczZhco/s800/startnewsession.jpg
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDvblxWLZI/AAAAAAAAC8M/PZ5tCczZhco/s800/startnewsession.jpg
 <br><br>
 If you want the previous session to be continued (for example in case this session were closed
 accidentally) you should press `Continue previous` button, otherwise press 
@@ -104,7 +104,7 @@ contains: `word[tabulation]translation[tabulation]example of usage`.
 Only files of this format can be imported. All the words will be
 imported within current session and will be included to the
 specified category.<br>
-To import word list press `Import...` button and specify a source file:
+To import word list press `Import...` button and specify a source file:<br>
 http://lh5.ggpht.com/_qJbawSsK7rw/SyDtOv_usHI/AAAAAAAAC7k/2s2IOpPC65c/s800/importopenfile.jpg
 <br><br>
 After pressing `Open` button import operation will start and after it
