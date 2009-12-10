@@ -1,0 +1,67 @@
+==October 8, 2009==
+Vocrecaptor Exercises v1.2.0:
+ * In exercises "Definition guessing" and "Translation guessing" if user doesn't press "Remember" button 
+within 5 seconds the button changes its caption to "Next >>" and the next word will be shown not in a one second but only when user hits this button
+ * In "Writing" exercise buttons "Answer" and "Check" bound to keyboard hotkeys Enter and F1 correspondingly
+
+==October 7, 2009==
+Vocrecaptor Web v1.3.2:
+ * Statistics section is removed from the start page
+
+Vocrecaptor Exercises v1.1.0:
+ * Removed recap functionality. This functionality is available in Vocrecaptor Editor
+ * All windows are brought to a common style
+ * Changed notification messages style
+ * Categories and sessions are reloading when user goes back from an exercise page to account
+ * Filtration of words by category and session works for anonymous and registered users
+
+Vocrecaptor Editor v1.2.2:
+ * In editor when user presses "Do not submit" button all fields will be cleared
+ * "Vocrecaptor" included into all windows title
+
+==September 10, 2009==
+Vocrecaptor Web v1.3.1 is released. New features:
+ * added a list of public dictionaries to the start page for download
+ * registered users can download uploaded dictionaries as text files and change them in Vocrecaptor Editor
+ * registered users can update their dictionaries after changing them using Vocrecaptor Editor. Following modes of dictionary content updates are supported: replacing update, appending update and merging update
+ * changed user menu
+ * added progress indicators and some other changes
+
+
+==September 8, 2009==
+ * Vocrecaptor Exercises v1.0.0 is released. Added 16 demo dictionaries for anonymous-mode for language pair "English through Russian", fixed important bug with Cyrillic.
+ * Vocrecaptor Web v1.2.1 is released. Registration is opened, added functionality for previewing of a dictionary content, interface is redesigned.
+
+		
+==Editor v1.2.1 (September 1, 2009)==
+ * Updated executable file of Vocrecaptor Editor v1.2.1 (hint, icon, UTF-8)
+ * Updated sample dictionaries archive (recoded into UTF-8)
+ * Web site redesign
+
+==Since 2009==
+ * Project is developing as a set of sub projects
+
+==Editor v2.1 (July 1, 2008)==
+ * One important bug (incorrect behaviour of timers in "Translation guessing" and "Definition guessing" exercises) was fixed
+
+==Editor v2.0 (March 10, 2008)==
+ * Added following exercises for word study: Cards, Translation guessing, Writing, Definition guessing, Translation choice, Definition choice, Mosaic
+
+==Editor v1.4 (December 23, 2007)==
+ * When you start words editor program will inform you if the dictionary file is not set
+ * Now you can learn the word just making a click on recap window
+
+==Editor v1.3 (October 30, 2007)==
+ * Added a continuation of the previous session
+ * Now you can check whether the store is containing the word definition you are entering or not before submit operation
+
+==Editor v1.2 (October 11, 2007)==
+ * Now application supports two languages - english and russian. Application automatically sets it's interface language according to the OS locale. In case your OS localized for third language (neither english nor russian) the default language (english) will be set
+
+==Editor v1.1 (October 10, 2007)==
+ * Fixed problem with encoding on Windows systems with ru-en locales
+ * Added version number to the program tray icon hint
+
+==Editor v1.0 (October 9, 2007)==
+ * First release
+	
