@@ -34,7 +34,7 @@ On the `Account panel` you will get a list of public dictionaries for those lang
 ===Account panel===
 http://lh3.ggpht.com/_qJbawSsK7rw/SyD3O1uPGyI/AAAAAAAAC8k/5_bVQbzu8Wc/s800/accountpanel.png
 <br><br>
-On the `Account panel` you have to choose dictionary to work with, session (<a href="vocrecaptoreditor.html#sessions">?</a>) and category (<a href="vocrecaptoreditor.html#creatingacategory">?</a>).
+On the `Account panel` you have to choose dictionary to work with, session ([Editor#Using_sessions ?]) and category ([Editor#Creating_a_category ?]).
 To back to `Login panel` press `<<` button.<br> 
 Choose a dictionary you want to exercise and press `Exercise` button. You will learn words from this dictionary by groups of 10 words in accordance with the order these words have in your dictionary.
 For instance, if the group you've chosen consists of 17 words firstly you'll do all exercises for first 10 words, and then
