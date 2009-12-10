@@ -4,21 +4,21 @@
 Let's assume you are reading a book on a language you are studying (for example english) or you are making a home assignment for your english language courses and you don't want to miss any single word you've met for the first time and you want to learn it. Of course, you can write it out in special notebook but let's do it in a different way.
 
 ==How to work with Vocrecaptor Editor?==
- * [Starting_Vocrecaptor_Editor Starting Vocrecaptor Editor]
- * [Opening_an_existing_storage Opening an existing storage]
- * [Creating_a_new_storage Creating a new storage]
- * [Starting_editor Starting editor]
- * [Using_sessions Using sessions]
- * [Creating_a_category Creating a category]
- * [Adding_a_word Adding a word]
- * [Importing_words_from_a_file Importing words from a file]
- * [Working_with_program_manager Working with program manager]
- * [Previewing_the_word_list Previewing the word list]
- * [Starting_a_recap_window Starting a recap window]
- * [Setting_recap_list Setting recap list]
- * [Setting_recap_settings Setting recap settings]
- * [Exporting_recap_list_to_a_file Exporting recap list to a file]
- * [Setting_up_look_and_feel Setting up look and feel]
+ * [Editor#Starting_Vocrecaptor_Editor Starting Vocrecaptor Editor]
+ * [Editor#Opening_an_existing_storage Opening an existing storage]
+ * [Editor#Creating_a_new_storage Creating a new storage]
+ * [Editor#Starting_editor Starting editor]
+ * [Editor#Using_sessions Using sessions]
+ * [Editor#Creating_a_category Creating a category]
+ * [Editor#Adding_a_word Adding a word]
+ * [Editor#Importing_words_from_a_file Importing words from a file]
+ * [Editor#Working_with_program_manager Working with program manager]
+ * [Editor#Previewing_the_word_list Previewing the word list]
+ * [Editor#Starting_a_recap_window Starting a recap window]
+ * [Editor#Setting_recap_list Setting recap list]
+ * [Editor#Setting_recap_settings Setting recap settings]
+ * [Editor#Exporting_recap_list_to_a_file Exporting recap list to a file]
+ * [Editor#Setting_up_look_and_feel Setting up look and feel]
 
 ===Starting Vocrecaptor Editor===
 To run the Vocrecaptor from the command line, go to the dist folder and type the following: <code>java -jar "vocrecaptoreditor-v1.2.1.jar"</code> where v1.2.1 is the current version number. You can also execute the program by double clicking on the jar-file. The program icon will appear in a system tray:<br>
