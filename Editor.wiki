@@ -1,0 +1,164 @@
+#Vocrecaptor Editor.
+
+==What is Vocrecaptor Editor?==
+Let's assume you are reading a book on a language you are studying (for example english) or you are making a home assignment for your english language courses and you don't want to miss any single word you've met for the first time and you want to learn it. Of course, you can write it out in special notebook but let's do it in a different way.
+
+==How to work with Vocrecaptor Editor?==
+ * [Starting_Vocrecaptor_Editor Starting Vocrecaptor Editor]
+ * [Opening_an_existing_storage Opening an existing storage]
+ * [Creating_a_new_storage Creating a new storage]
+ * [Starting_editor Starting editor]
+ * [Using_sessions Using sessions]
+ * [Creating_a_category Creating a category]
+ * [Adding_a_word Adding a word]
+ * [Importing_words_from_a_file Importing words from a file]
+ * [Working_with_program_manager Working with program manager]
+ * [Previewing_the_word_list Previewing the word list]
+ * [Starting_a_recap_window Starting a recap window]
+ * [Setting_recap_list Setting recap list]
+ * [Setting_recap_settings Setting recap settings]
+ * [Exporting_recap_list_to_a_file Exporting recap list to a file]
+ * [Setting_up_look_and_feel Setting up look and feel]
+
+===Starting Vocrecaptor Editor===
+To run the Vocrecaptor from the command line, go to the dist folder and type the following: <code>java -jar "vocrecaptoreditor-v1.2.1.jar"</code> where v1.2.1 is the current version number. You can also execute the program by double clicking on the jar-file. The program icon will appear in a system tray:<br>
+<img src="images/en/systemtray.jpg"><br><br>
+After a double click on the icon the <code>Program manager</code> window will appear:<br>
+<img src="images/en/programmanager_wordsmanager.jpg"><br><br>
+===Opening an existing storage===
+To open existing dictionary press <code>...</code> button and choose a dictionary file. If a format of the specified file is incorrect the message will appear:<br>
+<img src="images/en/storagedoesnotexists.jpg"><br><br>
+===Creating a new storage===
+In this case you should create a new dictionary (storage). To do this press <code>New...</code> button and in opened standard <code>File save dialog</code> specify storage path, file name and file extension (you may use <code>.txt</code> or whatever you like):<br> 
+<img src="images/en/createdictionary.jpg"><br><br>
+Created storage file will be set as a program dictionary:<br>
+<img src="images/en/pathsaved.jpg"><br><br>
+===Starting editor===
+Close <code>Program manager</code> window. Right-click on program icon in system tray and
+click on <code>Words editor</code>:<br>
+<img src="images/en/startwordseditor.jpg"><br><br>
+If dictionary file is not set the notification window will appear:<br>
+<img src="images/en/dictionaryisnotset.jpg"><br><br>
+In this case you have to open the <code>Program manager</code> and specify a dictionary file (<a href="#openstorage">?</a>). If dictionary file was set correctly the <code>Editor</code> window will appear:<br>
+<img src="images/en/editor.jpg"><br><br>
+===Using sessions===
+Each time you open an editor window the new session is started. During this
+session you can add as many words as you like and all these words will be
+saved within this session. It will allow you to recap words from
+specified session. Why do I need this? For example, when you are making 
+exercises for tomorrow's lesson you add all the words within a single 
+session so when your teacher
+will ask you to refresh in mind all the words from one of the previous 
+lesson you will make it easy if you remember the date and time of that
+session.<br>
+Each time you start editor window you will be asked whether you want to continue
+a previous session or start a new one:<br>
+<img src="images/en/startnewsession.jpg"><br><br>
+If you want the previous session to be continued (for example in case this session were closed
+accidentally) you should press <code>Continue previous</code> button, otherwise press 
+<code>Start new</code> button.<br>
+===Creating a category===
+To add a new word you should choose a category from <code>Category</code> list or
+create new category by pressing <code>New...</code> button and specifying it's name:<br>
+<img src="images/en/newcategory.jpg"><br><br>
+Press <code>OK</code> and category wll be added to category list and set as word's
+category. 
+===Adding a word===
+After this you should add word definition (input field <code>Definition</code>),
+translation into your language (input field <code>Translation</code>) and
+expression wich uses this word (input field <code>Example of usage</code>). 
+<code>Definition</code> is required field so while this field
+is empty the <code>Submit</code> button will stay disabled. Press <code>Submit</code> 
+button
+to add the word to dictionary. The fields will be cleared and you
+can add a next word. If the word you want to add is already exists in you dictionary
+you will get an information message along with a table containing possible duplicated words:<br>
+<img src="images/en/wordexists.jpg"><br><br>
+In the table you can see all the words and words combinations with this word. If you don't want to complete submission  -
+press <code>Do not submit</code> button otherwise press <code>Submit</code>.<br>
+It's recommended to check duplicated words just after you've entered a definition but not at the submission time.
+To do this you should press <code>Check...</code> button after the definition is
+entered. If the definition or the expression with this definition is found in the storage
+you will see a table with possible duplicated values:<br>
+<img src="images/en/checkdefinitionfound.jpg"><br><br>
+If the storage doesn't contain the word definition the <code>Check...</code> button will switch to disabled state 
+and you can continue:<br>
+<img src="images/en/checkdefinitionnotfound.jpg"><br><br>
+===Importing words from a file===
+If you don't want to fill the dictionary word by word you can import
+the word list from a file. File should be a plain text file where each line
+contains: <code>word[tabulation]translation[tabulation]example of usage</code>.
+Only files of this format can be imported. All the words will be
+imported within current session and will be included to the
+specified category.<br>
+To import word list press <code>Import...</code> button and specify a source file:
+<img src="images/en/importopenfile.jpg"><br><br>
+After pressing <code>Open</code> button import operation will start and after it
+will be finished the notification message in the system tray area will be
+shown:<br>
+<img src="images/en/importsuccess.jpg"><br><br>
+If something goes wrong you'll get an error message in the system tray
+area.<br>
+===Working with program manager===
+After adding new words you can start to recap them. Double click on
+program icon in system tray to start the <code>Program manager</code>. Ensure
+that the path string contains your storage file. <code>Category</code> list
+contains all categories and <code>Session</code> list contains all sessions from 
+specified storage:<br>
+<img src="images/en/programmanagerlists.jpg"><br><br>
+===Previewing the word list===
+You can choose any combination of these parameters. For example,
+you can choose all the words from <code>crime</code> category, all the words from
+yesterday's session or all <code>crime</code> words from today's session.
+To choose all categories or sessions from the list you should
+choose the <code>empty value</code> - the first value in the both lists.
+The preview table is refreshing automatically when you choose values from lists:<br>
+<img src="images/en/showlist.jpg"><br><br>
+Under the table you can see a words counter.<br>
+===Starting a recap window===
+Now you want to learn the words from this list. Go to the system
+tray area, right click on the program icon and choose <code>Words recap</code>:<br>
+<img src="images/en/startwordsrecap.jpg"><br><br>
+<code>Recap</code> window will appear. Drag it to the system tray area of the
+desktop. This window is modal thus it will stay over the others
+opened windows:<br>
+<img src="images/en/recapwindowinitially.jpg"><br><br>
+===Setting recap list===
+As you can see from the message in this window to start recaping you should
+specify the word list. Switch back to the <code>Program manager</code> window
+and press <code>Set for recap</code> button (<a href="#viewrecapwordslist">?</a>).<br>
+The <code>Recap</code> window will start periodically display the words from 
+the list: firstly definition, secondly translation and then 
+example of usage if it exists.<br>
+<img src="images/en/wordsrecaping.jpg"><br><br>
+===Setting recap settings===
+You can specify desirable intervals for definition, translation 
+and example displaying. Open <code>Recap manager</code> tab in <code>Program manager</code>
+window:<br>
+<img src="images/en/recapmanager.jpg"><br><br>
+Here you can choose display periods for each of these items.<br>
+If you want to recap the words in reverse order (translation appears
+before definition) - set <code>Show definition and translation in reverse
+order</code> checkbox. If you want to display words in random order you can
+do it here as well.<br>
+===Exporting recap list to a file===
+The <code>Program manager</code> allows to export currently recaping word list
+to file (for printing). To do this switch to the <code>Words manager</code> tab
+of the <code>Program manager</code> and press <code>Export list...</code> (<a href="#viewrecapwordslist">?</a>).<br>
+Note, that the <code>Export list...</code> button is enabled only if recap list is set (<a href="#settingrecaplist">?</a>).
+Press this button and enter a file name where you want to save word list to:<br>
+<img src="images/en/exportlist.jpg"><br><br>
+After the export operation completed you will get a notification message
+near the system tray area:<br>
+<img src="images/en/exportsuccess.jpg"><br><br>
+Now you can open this file, print it and hang it on the toilet door.<br>
+								<br><br>
+===Setting up look and feel===
+The program is cross-platform thus the interface will slightly differ
+between platforms. You can also choose the look and feel which you like
+more. Open <code>Program manager</code> tab in <code>Program manager</code> window. Here you
+can specify desirable <code>Look and feel mode</code> from the available modes:<br>
+<img src="images/en/availablelafs.jpg"><br><br>
+Some of them are cross-platform (for example Metal), some only for
+Windows (Windows, Windows classic). The list of available modes will
+differ between platforms.
