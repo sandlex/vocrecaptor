@@ -33,17 +33,22 @@ http://lh6.ggpht.com/_qJbawSsK7rw/SyDsWUvg_KI/AAAAAAAAC6w/tvkiFWi11WY/s800/stora
 <br><br>
 ===Creating a new storage===
 In this case you should create a new dictionary (storage). To do this press `New...` button and in opened standard `File save dialog` specify storage path, file name and file extension (you may use `.txt` or whatever you like):<br> 
-<img src="images/en/createdictionary.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDtNSZUpWI/AAAAAAAAC7U/bTD-kv9iUuI/s800/createdictionary.jpg
+<br><br>
 Created storage file will be set as a program dictionary:<br>
-<img src="images/en/pathsaved.jpg"><br><br>
+http://lh4.ggpht.com/_qJbawSsK7rw/SyDusLS3lSI/AAAAAAAAC8I/udBYoU303lk/s800/pathsaved.jpg
+<br><br>
 ===Starting editor===
 Close `Program manager` window. Right-click on program icon in system tray and
 click on `Words editor`:<br>
-<img src="images/en/startwordseditor.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDtP6or5bI/AAAAAAAAC74/pGzPmE7nACU/s800/startwordseditor.jpg
+<br><br>
 If dictionary file is not set the notification window will appear:<br>
-<img src="images/en/dictionaryisnotset.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDtNhn8i0I/AAAAAAAAC7Y/umImk3Q5wtI/s800/dictionaryisnotset.jpg
+<br><br>
 In this case you have to open the `Program manager` and specify a dictionary file ([Editor#Opening_an_existing_storage ?]). If dictionary file was set correctly the `Editor` window will appear:<br>
-<img src="images/en/editor.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDtN6X2k1I/AAAAAAAAC7c/b_leY_lyUlw/s800/editor.jpg
+<br><br>
 ===Using sessions===
 Each time you open an editor window the new session is started. During this
 session you can add as many words as you like and all these words will be
@@ -56,14 +61,16 @@ lesson you will make it easy if you remember the date and time of that
 session.<br>
 Each time you start editor window you will be asked whether you want to continue
 a previous session or start a new one:<br>
-<img src="images/en/startnewsession.jpg"><br><br>
+http://picasaweb.google.ru/lh/photo/VQm_bMBrZLWAcWNm1nANVg?feat=embedwebsite"><img src="http://lh5.ggpht.com/_qJbawSsK7rw/SyDvblxWLZI/AAAAAAAAC8M/PZ5tCczZhco/s800/startnewsession.jpg
+<br><br>
 If you want the previous session to be continued (for example in case this session were closed
 accidentally) you should press `Continue previous` button, otherwise press 
 `Start new` button.<br>
 ===Creating a category===
 To add a new word you should choose a category from `Category` list or
 create new category by pressing `New...` button and specifying it's name:<br>
-<img src="images/en/newcategory.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDtO1l7eTI/AAAAAAAAC7o/4WeETzJU5dM/s800/newcategory.jpg
+<br><br>
 Press `OK` and category wll be added to category list and set as word's
 category. 
 ===Adding a word===
@@ -76,17 +83,20 @@ button
 to add the word to dictionary. The fields will be cleared and you
 can add a next word. If the word you want to add is already exists in you dictionary
 you will get an information message along with a table containing possible duplicated words:<br>
-<img src="images/en/wordexists.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDtQK_OT8I/AAAAAAAAC8A/WrbkpKWgDG8/s800/wordexists.jpg
+<br><br>
 In the table you can see all the words and words combinations with this word. If you don't want to complete submission  -
 press `Do not submit` button otherwise press `Submit`.<br>
 It's recommended to check duplicated words just after you've entered a definition but not at the submission time.
 To do this you should press `Check...` button after the definition is
 entered. If the definition or the expression with this definition is found in the storage
 you will see a table with possible duplicated values:<br>
-<img src="images/en/checkdefinitionfound.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDtMsS2AAI/AAAAAAAAC7M/Kb5hKj438lY/s800/checkdefinitionfound.jpg
+<br><br>
 If the storage doesn't contain the word definition the `Check...` button will switch to disabled state 
 and you can continue:<br>
-<img src="images/en/checkdefinitionnotfound.jpg"><br><br>
+http://lh4.ggpht.com/_qJbawSsK7rw/SyDtNEjHRmI/AAAAAAAAC7Q/7QGcfEzgqVs/s800/checkdefinitionnotfound.jpg
+<br><br>
 ===Importing words from a file===
 If you don't want to fill the dictionary word by word you can import
 the word list from a file. File should be a plain text file where each line
@@ -95,11 +105,13 @@ Only files of this format can be imported. All the words will be
 imported within current session and will be included to the
 specified category.<br>
 To import word list press `Import...` button and specify a source file:
-<img src="images/en/importopenfile.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDtOv_usHI/AAAAAAAAC7k/2s2IOpPC65c/s800/importopenfile.jpg
+<br><br>
 After pressing `Open` button import operation will start and after it
 will be finished the notification message in the system tray area will be
 shown:<br>
-<img src="images/en/importsuccess.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDwYspAysI/AAAAAAAAC8Q/eMHv1iTc0m0/s800/importsuccess.jpg
+<br><br>
 If something goes wrong you'll get an error message in the system tray
 area.<br>
 ===Working with program manager===
@@ -108,7 +120,8 @@ program icon in system tray to start the `Program manager`. Ensure
 that the path string contains your storage file. `Category` list
 contains all categories and `Session` list contains all sessions from 
 specified storage:<br>
-<img src="images/en/programmanagerlists.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDtPDUBS2I/AAAAAAAAC7s/r0Ho1cN2FUU/s800/programmanagerlists.jpg
+<br><br>
 ===Previewing the word list===
 You can choose any combination of these parameters. For example,
 you can choose all the words from `crime` category, all the words from
@@ -116,16 +129,19 @@ yesterday's session or all `crime` words from today's session.
 To choose all categories or sessions from the list you should
 choose the `empty value` - the first value in the both lists.
 The preview table is refreshing automatically when you choose values from lists:<br>
-<img src="images/en/showlist.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDtPm6WG9I/AAAAAAAAC70/k1n8Qi4OEBY/s800/showlist.jpg
+<br><br>
 Under the table you can see a words counter.<br>
 ===Starting a recap window===
 Now you want to learn the words from this list. Go to the system
 tray area, right click on the program icon and choose `Words recap`:<br>
-<img src="images/en/startwordsrecap.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDtQDbBXlI/AAAAAAAAC78/AgcTDqVtGPA/s800/startwordsrecap.jpg
+<br><br>
 `Recap` window will appear. Drag it to the system tray area of the
 desktop. This window is modal thus it will stay over the others
 opened windows:<br>
-<img src="images/en/recapwindowinitially.jpg"><br><br>
+http://lh3.ggpht.com/_qJbawSsK7rw/SyDw-rrwKQI/AAAAAAAAC8U/KGTYape4FVc/s800/recapwindowinitially.jpg
+<br><br>
 ===Setting recap list===
 As you can see from the message in this window to start recaping you should
 specify the word list. Switch back to the `Program manager` window
@@ -133,12 +149,14 @@ and press `Set for recap` button ([Editor#Previewing_the_word_list ?]).<br>
 The `Recap` window will start periodically display the words from 
 the list: firstly definition, secondly translation and then 
 example of usage if it exists.<br>
-<img src="images/en/wordsrecaping.jpg"><br><br>
+http://lh4.ggpht.com/_qJbawSsK7rw/SyDxON2XDgI/AAAAAAAAC8Y/-fVLiDYnm2o/s800/wordsrecaping.jpg
+<br><br>
 ===Setting recap settings===
 You can specify desirable intervals for definition, translation 
 and example displaying. Open `Recap manager` tab in `Program manager`
 window:<br>
-<img src="images/en/recapmanager.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDtPWWD4jI/AAAAAAAAC7w/BZVPsfk4U0c/s800/recapmanager.jpg
+<br><br>
 Here you can choose display periods for each of these items.<br>
 If you want to recap the words in reverse order (translation appears
 before definition) - set `Show definition and translation in reverse
@@ -150,10 +168,12 @@ to file (for printing). To do this switch to the `Words manager` tab
 of the `Program manager` and press `Export list...` ([Editor#Previewing_the_word_list ?]).<br>
 Note, that the `Export list...` button is enabled only if recap list is set ([Editor#Setting_recap_list ?]).
 Press this button and enter a file name where you want to save word list to:<br>
-<img src="images/en/exportlist.jpg"><br><br>
+http://lh4.ggpht.com/_qJbawSsK7rw/SyDtOPc3VHI/AAAAAAAAC7g/27lIDaDyyjM/s800/exportlist.jpg
+<br><br>
 After the export operation completed you will get a notification message
 near the system tray area:<br>
-<img src="images/en/exportsuccess.jpg"><br><br>
+http://lh6.ggpht.com/_qJbawSsK7rw/SyDxqM_pl8I/AAAAAAAAC8c/6OAyeS66akc/s800/exportsuccess.jpg
+<br><br>
 Now you can open this file, print it and hang it on the toilet door.<br>
 								<br><br>
 ===Setting up look and feel===
@@ -161,7 +181,8 @@ The program is cross-platform thus the interface will slightly differ
 between platforms. You can also choose the look and feel which you like
 more. Open `Program manager` tab in `Program manager` window. Here you
 can specify desirable `Look and feel mode` from the available modes:<br>
-<img src="images/en/availablelafs.jpg"><br><br>
+http://lh5.ggpht.com/_qJbawSsK7rw/SyDtQkrGdtI/AAAAAAAAC8E/Iqc3E8NczgQ/s800/availablelafs.jpg
+<br><br>
 Some of them are cross-platform (for example Metal), some only for
 Windows (Windows, Windows classic). The list of available modes will
 differ between platforms.
