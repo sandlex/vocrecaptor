@@ -1,0 +1,29 @@
+#summary Describes tools and libraries required for projects development.
+
+= Common requirements =
+
+  * All project require [http://java.sun.com/javase/downloads/index.jsp SDK 1.6] or higher installed.
+  * All projects are configured to default SDK installation path - `C:\java\jdk1.6.0_12` and `C:\java\jre1.6.0_12`.
+  * Default workspace path for both Eclipse and NetBeans IDEs - `C:\projects\vocrecaptor\workspace`.
+  * [http://tortoisesvn.tigris.org Subversion client] ([http://rapidsvn.tigris.org also]) or separate plugins for particular IDE - Eclipse or NetBeans.
+
+= Sub-projects requirements =
+
+  * [DevEnvironment#Vocrecaptor_Editor Vocrecaptor Editor]
+  * [DevEnvironment#Vocrecaptor_Exercises Vocrecaptor Exercises]
+  * [DevEnvironment#Vocrecaptor_Web Vocrecaptor Web]
+
+
+==Vocrecaptor Editor==
+  * [http://www.eclipse.org/downloads Eclipse 3.5 Galileo] installed into `C:\java\eclipse-galileo-3.5` directory
+
+==Vocrecaptor Exercises==
+  * [http://www.netbeans.org/downloads/index.html Netbeans 6.5 IDE ] installed into `C:\java\NetBeans 6.5` directory
+  * [http://java.sun.com/javafx/downloads JavaFX 1.1 SDK]. Project is configured to the following javafx installation directory - `C:\java\javafx-sdk1.1`
+
+==Vocrecaptor Web==
+  * [http://www.eclipse.org/downloads Eclipse 3.5 Galileo] installed into `C:\java\eclipse-galileo-3.5` directory
+  * [http://code.google.com/intl/ru-RU/webtoolkit/download.html Google Web Toolkit] installed into `C:\java\gwt-windows-1.7.0` directory
+  * [http://code.google.com/intl/ru-RU/appengine/docs/java/tools/eclipse.html Google Plugin for Eclipse] this version in particular - `http://dl.google.com/eclipse/plugin/3.5` (choose to install `Google Plugin for Eclipse` and `Google App Engine Java SDK`)
+
+All other required libraries are comitted to svn as parts of projects.
