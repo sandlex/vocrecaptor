@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="sandlex, english, language, english language, tutor, tutorial, program, learning, 
+              study, studying, translation, translator, lerning words, linux, pda, pocket-pc, oxford, usa, training, career,
+              courses, abroad, gap-year, foreign language, improvement, improve, education, dictionary, cards, words, freeware, java, 
+              английский, язык, английский язык, руководство, программа, изучение, обучение, изучать, обучать, перевод,
+              переводчики, изучение слов, кпк, оксфорд, США, образование, карьера, за границей, иностранный язык, улучшение,
+              улучшать, образование, словарь, карточки, слова, карточки слов, бесплатно, упражнения, угадывание перевода, 
+              написание, угадывание определения, выбор перевода, выбор определения, мозаика, exercises, cards, translation guessing,
+              writing, definition guessing, translation choice, definition choice, mosaic, IELTS, ru_learningenglish, gwt, google web toolkit,
+              javafx, google app engine, gae, gwt, alexey peskov, r-words, алексей песков">
+<link href="default.css" type="text/css" rel="stylesheet" />
+<title>Vocrecaptor Editor</title>
+</head>
+<body>
+<table width="100%" border="0">
+<tr>
+<td align="center">
+<table width="850px" border="0">
+	<tr class="logo">
+		<td>
+			<a href="index_ru.html"><img src="images/logo153.png"/></a>
+		</td>
+		<td align="right" class="external">
+		<a href="http://twitter.com/vocrecaptor">Vocrecaptor на twitter</a><br>
+		<a href="http://groups.google.com/group/vocrecaptor">Vocrecaptor форум</a>
+		</td>
+	</tr>
+	<tr class="topmenu">
+		<td colspan="2">
+			<div align="left" class="pages"><a href="http://vocrecaptor.appspot.com">Vocrecaptor Web</a> | <a href="vocrecaptorexercises_ru.html">Vocrecaptor Exercises</a> | <a href="vocrecaptoreditor_ru.html">Vocrecaptor Editor</a></div>
+			<div align="right" class="flags"><a href="vocrecaptoreditor_ru.html"><img src="images/ru.gif" title="Русский"/></a>&nbsp;<a href="vocrecaptoreditor.html"><img src="images/au.gif" title="English"/></a></div>
+		</td>
+	</tr>
+	<tr class="content">
+		<td valign="top" padding="5px">
+<div id="editor_download">
+<h3>Vocrecaptor Editor v1.2.2</h3>
+Vocrecaptor Editor написан на Java, работает на всех платформах и требует <a href="http://java.sun.com/javase/downloads/index.jsp">Java Runtime Environment</a> 
+                                (JRE) версии 6 или выше.<br><br>
+<div class="download_jar"><a href="downloads/vocrecaptoreditor-v1.2.2.jar">Загрузить</a></div>
+</div>
+		</td>
+		<td padding="5px">
+<div id="editor_content">
+<h3>Что такое Vocrecaptor Editor?</h3>
+                                Представим, что вы читаете книгу на изучаемом языке (например, англиском) или выполняете домашенее задание по курсам английского языка и не хотите оставить без внимания ни одного незнакомого слова и хотите его выучить. Вы можете выписать это слово в спецаильную тетрадь, но давайте сделаем по-другому.<br>
+                                <h3>Работа с Vocrecaptor Editor</h3>
+                                <ul>
+                                	<li><a href="#starting">Запуск Vocrecaptor Editor</a></li>
+                                    <li><a href="#openstorage">Открытие существующего словаря</a></li>
+                                    <li><a href="#createstorage">Создание словаря</a></li>
+                                    <li><a href="#startingeditor">Запуск редактора</a></li>
+                                    <li><a href="#sessions">Использование сессий</a></li>
+                                    <li><a href="#creatingacategory">Создание категории слов</a></li>
+                                    <li><a href="#creatingaword">Добавление слова</a></li>
+                                    <li><a href="#import">Импрот слов из файла</a></li>
+                                    <li><a href="#workingwithprogrammanager">Работа с менеджером программы</a></li>
+                                    <li><a href="#viewrecapwordslist">Просмотр списка слов</a></li>
+                                    <li><a href="#startingrecapwindow">Запуск окна повторений</a></li>
+                                    <li><a href="#settingrecaplist">Установка списка слов повторений</a></li>
+                                    <li><a href="#recapsettings">Установка свойств режима повторений</a></li>
+                                    <li><a href="#export">Экспорт списка повторений в файл</a></li>
+                                    <li><a href="#lookandfeel">Настройка графического интерфейса программы</a></li>
+                                </ul>
+				<br>
+                                <a name="starting"><h4>Запуск Vocrecaptor Editor</h4></a>
+                                Для запуска VocRecaptor из командной строки перейдите в каталог с исполняемым файлом и выполните команду: <code>java -jar "vocrecaptoreditor-v1.2.1.jar"</code>, где v1.2.1 соответствует номеру текущего релиза приложения.
+                                Также приложение можно запустив двойным щелчком по исполняемому jar-файлу.
+                                В системном трее появится иконка программы:<br>
+                                <img src="images/en/systemtray.jpg"><br><br>
+                                По двойному щелчку по иконке запустится окно <code>Program manager</code>:<br>
+                                <img src="images/en/programmanager_wordsmanager.jpg"><br><br>
+                                <a name="openstorage"><h4>Открытие существующего словаря</h4></a>
+                                Для открытия существующего словаря нажмите кнопку <code>...</code> и выберите нужный файл в появившемся диалоге открытия файла.
+                                том случае, если выбран файл неверного формата, появится сообщение:<br>
+                                <img src="images/en/storagedoesnotexists.jpg"><br><br>
+                                <a name="createstorage"><h4>Создание словаря</h4></a>
+                                В этом случае необходимо создать новый словарь. Для того чтобы сделать это, нажмите кнопку
+                                <code>New...</code> и в появившемся <code>диалоге сохранения файлов</code> укажите 
+                                расположение файла, его название и расширение (вы можете указать расширение <code>.txt</code> или любое другое):<br> 
+                                <img src="images/en/createdictionary.jpg"><br><br>
+                                Созданный словарь будет установлен в качестве текущего словаря программы:<br>
+                                <img src="images/en/pathsaved.jpg"><br><br>
+                                <a name="startingeditor"><h4>Запуск редактора</h4></a>
+                                Закройте <code>Program manager</code>. Нажмите правой кнопкой мыши на иконке программы в системном трее
+                                и в контекстном меню выберите пункт <code>Words editor</code>:<br>
+                                <img src="images/en/startwordseditor.jpg"><br><br>
+                                Если не был указан файл словаря, появится нотификационное сообщение:<br>
+                                <img src="images/en/dictionaryisnotset.jpg"><br><br>
+                                В этом случае необходимо запустить <code>Program manager</code> и задать файл словаря (<a href="#openstorage">?</a>).
+                                Если словарь был указан корректно, то появится окно <code>Editor</code>:<br>
+                                <img src="images/en/editor.jpg"><br><br>
+                                <a name="sessions"><h4>Использование сессий</h4></a>
+                                Каждый раз, когда вы запускаете окно редактора слов, запускается новая сессия.
+                                В течение сессии вы можете вводить любое количество слов в словарь, и все эти
+                                слова будут сохранены внутри данной сессии. Это позволит вам позже выполнить 
+                                повторение слов из какой-либо выбранной сессии. Зачем это нужно? Предположим,
+                                что вы делаете задания для завтрашних курсов и добавляете все незнакомые слова
+                                внутри одной сессии. На одном из следующих уроков преподаватель может предложить
+                                вам выучить все слова из одного из предыдущих занятий, чтобы выполнить проверочную
+                                работу. Вы сможете легко повторить все нужные слова, зная дату и время нужной сессии.<br>
+                                каждый раз при запуске редактора слов приложение спрашивает, желаете ли вы начать новую сессию
+                                или продолжить предыдущую:<br>
+                                <img src="images/en/startnewsession.jpg"><br><br>
+                                Если вы хотите, чтобы была продолжена предыдущая сессия (например, если она была случайно
+                                закрыта), вы дожны нажать кнопку <code>Continue previous</code>, иначе нажмите кнопку 
+                                <code>Start new</code>.<br>
+                                <a name="creatingacategory"><h4>Создание категории слов</h4></a>
+                                Для добавления слова необходимо выбрать его категорию из списка <code>Category</code>
+                                или создать новую категорию, нажав на кнопку <code>New...</code> и указав ее название:<br>
+                                <img src="images/en/newcategory.jpg"><br><br>
+                                Нажмите <code>OK</code> и категория будет добавления в список категорий и выбрана в качестве
+                                категории слова. 
+                                <a name="creatingaword"><h4>Добавление слова</h4></a>
+                                После этого необходимо указать определение слова (поле ввода <code>Definition</code>),
+                                перевод на нужный язык (поле ввода <code>Translation</code>) и пример использования слова
+                                (поле ввода <code>Example of usage</code>). 
+                                Поле <code>Definition</code> является обязательным, так что кнопка <code>Submit</code> 
+                                будет оставаться недоступной до тех пор, пока не введено определение слова. Нажмите кнопку <code>Submit</code> 
+                                чтобы добавить слово в словарь. Поля ввода очистятся и вы сможете приступить
+                                к вводу следующего слова. Если введенное слово уже содержится в словаре, появится таблица со возможными дублирующимися словами:<br>
+                                <img src="images/en/wordexists.jpg"><br><br>
+                                Здесь вы увидите все слова и комбинации слов с введенным словом: Если вы не хотите добавлять слово в словарь - нажмите
+                                кнопку <code>Do not submit</code>, иначе нажмите <code>Submit</code>.<br>
+                                Рекомендуется выполнять предварительный поиск определения слова в словаре до его добавления.
+                                Для того, чтобы выполнить проверку, нажмите кнопку <code>Check...</code> сразу после того, как
+                                вы ввели определение слова. Если определение уже содержится в словаре, появится таблица со возможными дублирующимися словами:<br>
+                                <img src="images/en/checkdefinitionfound.jpg"><br><br>
+                                Если вводимое определение не присутствует в словаре, кнопка <code>Check...</code> станет недоступной, и
+                                вы сможете продолжить ввод:<br>
+                                <img src="images/en/checkdefinitionnotfound.jpg"><br><br>
+                                <a name="import"><h4>Импрот слов из файла</h4></a>
+                                Если вы не хотите заполнять словарь пословно, вы можете импортировать список слов из файла.
+                                Файл должен иметь текстовый формат и содержать строки следующего вида:
+                                <code>определение[разделитель-табуляция]перевод[разделитель-табуляция]пример использования</code>.
+                                Импорт возможен только из файлов, удовлетворящих данному формату. Все слова будут добавлены в
+                                рамках одной сессии и будут включены в выбранную категорию.<br>
+                                Для импорта списка слов нажмите кнопку <code>Import...</code> и в появившемся диалоге
+                                укажите файл-источник:
+                                <img src="images/en/importopenfile.jpg"><br><br>
+                                После нажатия кнопки <code>Open</code> начнется операция импорта и по ее завршении вы увидите нотификационное
+                                сообщение в области системного трея:<br>
+                                <img src="images/en/importsuccess.jpg"><br><br>
+                                Если во время операции импорта произойдут ошибки, то в области системного трея появится нотификационное сообщение
+                                об ошибке.<br>
+                                <a name="workingwithprogrammanager"><h4>Работа с менеджером программы</h4></a>
+                                После добавления новых слов можно начать их изучение. Двойным щелчком по иконке программы в
+                                системном трее запускаем <code>Program manager</code>. Убедитесь, что в качестве пути словаря
+                                указан нужный файл. Список <code>Category</code> содержит все имеющиеся в словаре категории, а список
+                                <code>Session</code> содержит все сессии:<br>
+                                <img src="images/en/programmanagerlists.jpg"><br><br>
+                                <a name="viewrecapwordslist"><h4>Просмотр списка слов</h4></a>
+                                Вы можете выбрать любую комбинацию этих параметров. Например, вы можете выбрать все слова категории
+                                <code>crime</code>все слова вчерашней сессии или все слова категории <code>crime</code> сегодняшней сессии.
+                                Для того, чтобы выбрать все категории из списка, выберите <code>пустую строку</code>, которая идет первой в каждом
+                                из списков. Для просмотра списка слов достаточно выбрать значение категории и сессии:<br>
+                                <img src="images/en/showlist.jpg"><br><br>
+                                Под текстовым полем расположен счетчик слов, отображающий количество слов, удовлетворяющих выбранным критериям.<br>
+                                <a name="startingrecapwindow"><h4>Запуск окна повторений</h4></a>
+                                Сейчас вы хотите приступить к повторению слов из списка. Щелкние правой кнопкой на иконке программы в системном трее
+                                и выберите пункт меню <code>Words recap</code>:<br>
+                                <img src="images/en/startwordsrecap.jpg"><br><br>
+                                Запустится окно <code>Recap</code>. Для удобства перетащите окно поближе к системному трею. Данное окно
+                                всегда будет находиться поверх других открытых окон операционной системы:<br>
+                                <img src="images/en/recapwindowinitially.jpg"><br><br>
+                                <a name="settingrecaplist"><h4>Установка списка слов повторений</h4></a>
+                                Как вы увидите из сообщения, список повторений пуст, и для повторения необходимо указать сессию и категорию слов.
+                                Перейдите в окно <code>Program manager</code> и нажмите кнопку <code>Set for recap</code> (<a href="#viewrecapwordslist">?</a>).<br>
+                                В окне <code>Recap</code> начнут периодически меняться слова из списка: сначала показывается определение,
+                                потом ниже появляется перевод, а затем пример использования, если он указан.<br>
+                                <img src="images/en/wordsrecaping.jpg"><br><br>
+                                <a name="recapsettings"><h4>Установка свойств режима повторений</h4></a>
+                                Вы можете указать желаемую длительность интервалов отображения определений, переводов и примеров использования.
+                                Откройте вкладку <code>Recap manager</code> окна <code>Program manager</code>:<br>
+                                <img src="images/en/recapmanager.jpg"><br><br>
+                                Здесь вы можете выбрать длительность отображения для каждого из данных параметров.<br>
+                                Если вы хотите повторять слова в обратном порядке (сначала появляется перевод слова, затем определение) - 
+                                установите параметр <code>Show definition and translation in reverse
+                                order</code>. Если вы хотите, чтобы слова отображались в случайном порядке - установите соответствующий параметр.<br>
+                                <a name="export"><h4>Экспорт списка повторений в файл</h4></a>
+                                <code>Program manager</code> позволяет экспортировать текущий список повторений в текстовый файл (для дальнейшего
+                                распечатывания). Чтобы сделать это переключитесь на вкладку <code>Words manager</code> окна 
+                                <code>Program manager</code> и нажмите кнопку <code>Export list...</code> (<a href="#viewrecapwordslist">?</a>).<br>
+                                Обратите внимание, что кнопка <code>Export list...</code> доступна только в том случае, если задан список повторений (<a href="#settingrecaplist">?</a>).
+                                Нажмите эту кнопку и укажите файл, в который хотите сохранить список:<br>
+                                <img src="images/en/exportlist.jpg"><br><br>
+                                По завершении операции экспорта вы получите нотификационное сообщение в области системного трея:<br>
+                                <img src="images/en/exportsuccess.jpg"><br><br>
+                                Теперь можно открыть файл, распечатать и повесить на видном месте (например, на стенку или на дверь туалета).<br>
+								<br><br>
+                                <a name="lookandfeel"><h4>Настройка графического интерфейса программы</h4></a>
+                                Программа является кросс-платформенной, поэтому внешний вид интерфейса может различаться в зависомости
+                                от используемой платформы. Также вы сами можете выбрать наиболее подходящий для вас графический интерфейс.
+                                Откройте вкладку <code>Program manager</code> окна  <code>Program manager</code>. 
+                                Здесь вы можете выбрать желаемый <code>Look and feel mode</code> из доступных в спике:<br>
+                                <img src="images/en/availablelafs.jpg"><br><br>
+                                Некоторые из них являются кросс-платформенными (например, Metal), некоторые поддерживаются только ОС Windows
+                                (Windows, Windows classic). Список доступных интерфейсов будет различаться между платформами.
+</div>
+		</td>
+	</tr>
+	<tr class="footer">
+		<td colspan="2" align="center"><a href="http://www.linkedin.com/in/alexeypeskov">Alexey Peskov</a>, 2007-2009</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
