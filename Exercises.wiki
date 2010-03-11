@@ -17,14 +17,14 @@ to refresh the words you've learned in your mind.<br>
 
 ===Starting exercises===
 To start exercising you can click one of the buttons `Launch applet` or `Launch application` below:
-<br><br>[http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.html http://lh6.ggpht.com/_qJbawSsK7rw/SyDbopyXIDI/AAAAAAAAC6Y/HDv29AZH_1g/s800/launchapplet.jpg]
-<br><br>[http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.jnlp http://lh6.ggpht.com/_qJbawSsK7rw/SyDbolVbh4I/AAAAAAAAC6c/TmQYwpLGZmk/s800/launchapplication.jpg]
+<br><br>[http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.html http://vocrecaptor.googlecode.com/svn/wiki/images/launchapplet.jpg]
+<br><br>[http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.jnlp http://vocrecaptor.googlecode.com/svn/wiki/images/launchapplication.jpg]
 <br>
 If you choose `Launch applet` Exercise will be started in you browser, if you choose `Launch application` it will be started as a desktop application.
 <br><br>
 ===Logging in===
 After application or applet is started you get a `Login page`:<br><br>
-http://lh4.ggpht.com/_qJbawSsK7rw/SyD3PUAqb5I/AAAAAAAAC80/V2BXjSCkZ6I/s800/login.png
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/login.png
  * Entering you login and password (you have to register on [http://vocrecaptor.appspot.com Vocrecaptor Web site] and upload some dictionaries)
 you will be logged as an authorized user and on the `Account panel` you will get a list of dictionaries you uploaded to [http://vocrecaptor.appspot.com Vocrecaptor Web site] and will be able to choose between them.
  * If you don't have or don't want to have an account you can check `Anonymous` option and enter without registration. In this case
@@ -33,7 +33,7 @@ On the `Account panel` you will get a list of public dictionaries for those lang
 
 <br><br>
 ===Account panel===
-http://lh3.ggpht.com/_qJbawSsK7rw/SyD3O1uPGyI/AAAAAAAAC8k/5_bVQbzu8Wc/s800/accountpanel.png
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/accountpanel.png
 <br><br>
 On the `Account panel` you have to choose dictionary to work with, session ([Editor#Using_sessions ?]) and category ([Editor#Creating_a_category ?]).
 To back to `Login panel` press `<<` button.<br> 
@@ -44,19 +44,19 @@ Definition choosing, Translation guessing, Translation choosing and Mosaic.<br>T
 account panel press `<<` button.
 <br><br>
 ===Exercise Cards===
-http://lh5.ggpht.com/_qJbawSsK7rw/SyD3OzCVYYI/AAAAAAAAC8o/22EPPwlhYb4/s800/cards.png
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/cards.png
 <br><br>
 Carefully read the word (the first one) and its translation (the second one) and try to remember them.
 After this press `Next >>` button (or press `Space` on your keyboard while `Next >>` button is focused). You'll see the next pair of words. Remember them and so force.
 Do this for each word from this group.
 <br><br>
 ===Exercise Definition guessing===
-http://lh5.ggpht.com/_qJbawSsK7rw/SyD3PPgYEqI/AAAAAAAAC8w/TfUPtTvS6fg/s800/definitionguessing.png<br><br>
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/definitionguessing.png<br><br>
 After the window opening the countdown timer is started and you have 5 seconds to remember the definition of the word given. 
 If you remember it press `Remember` button, timer will stop and after 1 seconds the next word will be shown.
 <br><br>
 ===Exercise Writing===
-http://lh5.ggpht.com/_qJbawSsK7rw/SyD3W8U9HOI/AAAAAAAAC9E/J0idEL4FU2w/s800/writing.png<br><br>
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/writing.png<br><br>
 In this exercise you have to write a word definition seeing its translation. 
 Here you see the word translation and text field where you have to write definition. To check the word you've written press
 `Check` button. The correct answer will be displayed (it'll be hide when you start writing again). 
@@ -64,22 +64,22 @@ To give you answer press `Answer` button. If you've entered the word correctly y
 Pay you attention that you can guess the word structure by structure of the word masked with asteriks `*`. 
 <br><br>
 ===Exercise Definition choosing===
-http://lh3.ggpht.com/_qJbawSsK7rw/SyD3O0_ncJI/AAAAAAAAC8s/NdUeQ3mQ1l0/s800/definisionchoosing.png<br><br>
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/definisionchoosing.png<br><br>
 In this exercise a translation is placed at the top of the window. All definitions are given as buttons. You have to choose a correspondent definition by pressing buttons.
 If the pair "definition-translation" is correct you'll get the next word to choose, otherwise you'll get nothing. Try again.
 <br><br>
 ===Exercise Translation guessing===
-http://lh3.ggpht.com/_qJbawSsK7rw/SyD3W0pHmnI/AAAAAAAAC9A/AoMPhFAXjj4/s800/translationguessing.png<br><br>    
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/translationguessing.png<br><br>    
 After the window opening the countdown timer is started and you have 5 seconds to remember the translation of the word given. 
 If you remember it press `Remember` button, timer will stop and after 1 seconds the next word will be shown.
 <br><br>
 ===Exercise Translation choosing===
-http://lh3.ggpht.com/_qJbawSsK7rw/SyD3WuOc5PI/AAAAAAAAC88/ZI3-beHt_F8/s800/translationchoosing.png<br><br>
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/translationchoosing.png<br><br>
 In this exercise a definition is placed at the top of the window. All translation are given as buttons. You have to choose a correspondent translation by pressing buttons.
 If the pair "definition-translation" is correct you'll get the next word to choose, otherwise you'll get nothing. Try again.
 <br><br>
 ===Exercise Mosaic===
-http://lh6.ggpht.com/_qJbawSsK7rw/SyD3WsyfGUI/AAAAAAAAC84/Yb9PSL2jLN8/s800/mosaic.png<br><br>
+http://vocrecaptor.googlecode.com/svn/wiki/images/exercises/mosaic.png<br><br>
 In the last exercise you have to match definitions and translations of all words from current group.
 At the left-hand column there are words arranged randomly, at the right-hand column - translations. You have to match all the pairs by pressing
 the buttons from the opposite columns. Choose the word from, for instance, the left column and press the button. 
