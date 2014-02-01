@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <jnlp spec="1.0+" codebase="http://localhost:1852/exercises/" href="Vocrecaptorexercises.jnlp"> -->
+<jnlp spec="1.0+" codebase="http://vocrecaptor.appspot.com/exercises/" href="Vocrecaptorexercises.jnlp">
+    <information>
+        <title>Vocrecaptor</title>
+        <vendor>Alexey Peskov</vendor>
+        <!-- <homepage href="http://localhost:1852/exercises/"/> -->
+        <homepage href="http://vocrecaptor.appspot.com/exercises/"/>
+        <description>Vocrecaptor</description>
+        <offline-allowed/>
+        <shortcut>
+            <desktop/>
+        </shortcut>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <j2se version="1.5+"/>
+        <extension name="JavaFX Runtime" href="http://dl.javafx.com/1.1/javafx-rt.jnlp"/>
+        <jar href="Vocrecaptorexercises.jar" main="true"/>
+    </resources>
+    <application-desc main-class="com.vocrecaptor.fx.Main">
+    </application-desc>
+</jnlp>

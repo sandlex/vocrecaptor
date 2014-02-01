@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="sandlex, english, language, english language, tutor, tutorial, program, learning, 
+              study, studying, translation, translator, lerning words, linux, pda, pocket-pc, oxford, usa, training, career,
+              courses, abroad, gap-year, foreign language, improvement, improve, education, dictionary, cards, words, freeware, java, 
+              английский, язык, английский язык, руководство, программа, изучение, обучение, изучать, обучать, перевод,
+              переводчики, изучение слов, кпк, оксфорд, США, образование, карьера, за границей, иностранный язык, улучшение,
+              улучшать, образование, словарь, карточки, слова, карточки слов, бесплатно, упражнения, угадывание перевода, 
+              написание, угадывание определения, выбор перевода, выбор определения, мозаика, exercises, cards, translation guessing,
+              writing, definition guessing, translation choice, definition choice, mosaic, IELTS, ru_learningenglish, gwt, google web toolkit,
+              javafx, google app engine, gae, gwt, alexey peskov, r-words, алексей песков">
+<link href="default.css" type="text/css" rel="stylesheet" />
+<title>Vocrecaptor Editor</title>
+</head>
+<body>
+<table width="100%" border="0">
+<tr>
+<td align="center">
+<table width="850px" border="0">
+	<tr class="logo">
+		<td>
+			<a href="index.html"><img src="images/logo153.png"/></a>
+		</td>
+		<td align="right" class="external">
+		<a href="http://twitter.com/vocrecaptor">Vocrecaptor on twitter</a><br>
+		<a href="http://groups.google.com/group/vocrecaptor">Vocrecaptor discussion group</a>
+		</td>
+	</tr>
+	<tr class="topmenu">
+		<td colspan="2">
+			<div align="left" class="pages"><a href="http://vocrecaptor.appspot.com">Vocrecaptor Web</a> | <a href="vocrecaptorexercises.html">Vocrecaptor Exercises</a> | <a href="vocrecaptoreditor.html">Vocrecaptor Editor</a></div>
+			<div align="right" class="flags"><a href="vocrecaptoreditor_ru.html"><img src="images/ru.gif" title="Русский"/></a>&nbsp;<a href="vocrecaptoreditor.html"><img src="images/au.gif" title="English"/></a></div>
+		</td>
+	</tr>
+	<tr class="content">
+		<td valign="top" padding="5px">
+<div id="editor_download">
+<h3>Vocrecaptor Editor v1.2.2</h3>
+Vocrecaptor Editor is written in Java, works on all platforms and requires <a href="http://java.sun.com/javase/downloads/index.jsp">Java Runtime Environment</a> 
+                                (JRE) 6 or later.<br><br>
+<div class="download_jar"><a href="downloads/vocrecaptoreditor-v1.2.2.jar">Download</a></div>
+</div>
+		</td>
+		<td padding="5px">
+<div id="editor_content">
+<h3>What is Vocrecaptor Editor?</h3>
+                                Let's assume you are reading a book on a language you are studying (for example english) or you 
+                                are making a home assignment for your english language courses and you
+                                don't want to miss any single word you've met for the first time and you want
+                                to learn it. Of course, you can write it out in special notebook but let's 
+                                do it in a different way.<br>
+                                <h3>How to work with Vocrecaptor Editor?</h3>
+                                <ul>
+                                	<li><a href="#starting">Starting Vocrecaptor Editor</a></li>
+                                    <li><a href="#openstorage">Opening an existing storage</a></li>
+                                    <li><a href="#createstorage">Creating a new storage</a></li>
+                                    <li><a href="#startingeditor">Starting editor</a></li>
+                                    <li><a href="#sessions">Using sessions</a></li>
+                                    <li><a href="#creatingacategory">Creating a category</a></li>
+                                    <li><a href="#creatingaword">Adding a word</a></li>
+                                    <li><a href="#import">Importing words from a file</a></li>
+                                    <li><a href="#workingwithprogrammanager">Working with program manager</a></li>
+                                    <li><a href="#viewrecapwordslist">Previewing the word list</a></li>
+                                    <li><a href="#startingrecapwindow">Starting a recap window</a></li>
+                                    <li><a href="#settingrecaplist">Setting recap list</a></li>
+                                    <li><a href="#recapsettings">Setting recap settings</a></li>
+                                    <li><a href="#export">Exporting recap list to a file</a></li>
+                                    <li><a href="#lookandfeel">Setting up look and feel</a></li>
+                                </ul>
+				<br>
+                                <a name="starting"><h4>Starting Vocrecaptor Editor</h4></a>
+                                To run the Vocrecaptor from the command line, 
+                                go to the dist folder and type the following: <code>java -jar "vocrecaptoreditor-v1.2.1.jar"</code> where v1.2.1 is the current version number. You can
+                                also execute the program by double clicking on the jar-file.
+                                The program icon will appear in a system tray:<br>
+                                <img src="images/en/systemtray.jpg"><br><br>
+                                After a double click on the icon the <code>Program manager</code> window will appear:<br>
+                                <img src="images/en/programmanager_wordsmanager.jpg"><br><br>
+                                <a name="openstorage"><h4>Opening an existing storage</h4></a>
+                                To open existing dictionary press <code>...</code> button and choose a dictionary file.
+                                If a format of the specified file is incorrect the message will appear:<br>
+                                <img src="images/en/storagedoesnotexists.jpg"><br><br>
+                                <a name="createstorage"><h4>Creating a new storage</h4></a>
+                                In this case you should create a new dictionary (storage). To do this press
+                                <code>New...</code> button and in opened standard <code>File save dialog</code> 
+                                specify storage path, 
+                                file name and file extension (you may use <code>.txt</code> or whatever you like):<br> 
+                                <img src="images/en/createdictionary.jpg"><br><br>
+                                Created storage file will be set as a program dictionary:<br>
+                                <img src="images/en/pathsaved.jpg"><br><br>
+                                <a name="startingeditor"><h4>Starting editor</h4></a>
+                                Close <code>Program manager</code> window. Right-click on program icon in system tray and
+                                click on <code>Words editor</code>:<br>
+                                <img src="images/en/startwordseditor.jpg"><br><br>
+                                If dictionary file is not set the notification window will appear:<br>
+                                <img src="images/en/dictionaryisnotset.jpg"><br><br>
+                                In this case you have to open the <code>Program manager</code> and specify a dictionary file (<a href="#openstorage">?</a>).
+                                If dictionary file was set correctly the <code>Editor</code> window will appear:<br>
+                                <img src="images/en/editor.jpg"><br><br>
+                                <a name="sessions"><h4>Using sessions</h4></a>
+                                Each time you open an editor window the new session is started. During this
+                                session you can add as many words as you like and all these words will be
+                                saved within this session. It will allow you to recap words from
+                                specified session. Why do I need this? For example, when you are making 
+                                exercises for tomorrow's lesson you add all the words within a single 
+                                session so when your teacher
+                                will ask you to refresh in mind all the words from one of the previous 
+                                lesson you will make it easy if you remember the date and time of that
+                                session.<br>
+                                Each time you start editor window you will be asked whether you want to continue
+                                a previous session or start a new one:<br>
+                                <img src="images/en/startnewsession.jpg"><br><br>
+                                If you want the previous session to be continued (for example in case this session were closed
+                                accidentally) you should press <code>Continue previous</code> button, otherwise press 
+                                <code>Start new</code> button.<br>
+                                <a name="creatingacategory"><h4>Creating a category</h4></a>
+                                To add a new word you should choose a category from <code>Category</code> list or
+                                create new category by pressing <code>New...</code> button and specifying it's name:<br>
+                                <img src="images/en/newcategory.jpg"><br><br>
+                                Press <code>OK</code> and category wll be added to category list and set as word's
+                                category. 
+                                <a name="creatingaword"><h4>Adding a word</h4></a>
+                                After this you should add word definition (input field <code>Definition</code>),
+                                translation into your language (input field <code>Translation</code>) and
+                                expression wich uses this word (input field <code>Example of usage</code>). 
+                                <code>Definition</code> is required field so while this field
+                                is empty the <code>Submit</code> button will stay disabled. Press <code>Submit</code> 
+                                button
+                                to add the word to dictionary. The fields will be cleared and you
+                                can add a next word. If the word you want to add is already exists in you dictionary
+                                you will get an information message along with a table containing possible duplicated words:<br>
+                                <img src="images/en/wordexists.jpg"><br><br>
+                                In the table you can see all the words and words combinations with this word. If you don't want to complete submission  -
+                                press <code>Do not submit</code> button otherwise press <code>Submit</code>.<br>
+                                It's recommended to check duplicated words just after you've entered a definition but not at the submission time.
+                                To do this you should press <code>Check...</code> button after the definition is
+                                entered. If the definition or the expression with this definition is found in the storage
+                                you will see a table with possible duplicated values:<br>
+                                <img src="images/en/checkdefinitionfound.jpg"><br><br>
+                                If the storage doesn't contain the word definition the <code>Check...</code> button will switch to disabled state 
+                                and you can continue:<br>
+                                <img src="images/en/checkdefinitionnotfound.jpg"><br><br>
+                                <a name="import"><h4>Importing words from a file</h4></a>
+                                If you don't want to fill the dictionary word by word you can import
+                                the word list from a file. File should be a plain text file where each line
+                                contains: <code>word[tabulation]translation[tabulation]example of usage</code>.
+                                Only files of this format can be imported. All the words will be
+                                imported within current session and will be included to the
+                                specified category.<br>
+                                To import word list press <code>Import...</code> button and specify a source file:
+                                <img src="images/en/importopenfile.jpg"><br><br>
+                                After pressing <code>Open</code> button import operation will start and after it
+                                will be finished the notification message in the system tray area will be
+                                shown:<br>
+                                <img src="images/en/importsuccess.jpg"><br><br>
+                                If something goes wrong you'll get an error message in the system tray
+                                area.<br>
+                                <a name="workingwithprogrammanager"><h4>Working with program manager</h4></a>
+                                After adding new words you can start to recap them. Double click on
+                                program icon in system tray to start the <code>Program manager</code>. Ensure
+                                that the path string contains your storage file. <code>Category</code> list
+                                contains all categories and <code>Session</code> list contains all sessions from 
+                                specified storage:<br>
+                                <img src="images/en/programmanagerlists.jpg"><br><br>
+                                <a name="viewrecapwordslist"><h4>Previewing the word list</h4></a>
+                                You can choose any combination of these parameters. For example,
+                                you can choose all the words from <code>crime</code> category, all the words from
+                                yesterday's session or all <code>crime</code> words from today's session.
+                                To choose all categories or sessions from the list you should
+                                choose the <code>empty value</code> - the first value in the both lists.
+                                The preview table is refreshing automatically when you choose values from lists:<br>
+                                <img src="images/en/showlist.jpg"><br><br>
+                                Under the table you can see a words counter.<br>
+                                <a name="startingrecapwindow"><h4>Starting a recap window</h4></a>
+                                Now you want to learn the words from this list. Go to the system
+                                tray area, right click on the program icon and choose <code>Words recap</code>:<br>
+                                <img src="images/en/startwordsrecap.jpg"><br><br>
+                                <code>Recap</code> window will appear. Drag it to the system tray area of the
+                                desktop. This window is modal thus it will stay over the others
+                                opened windows:<br>
+                                <img src="images/en/recapwindowinitially.jpg"><br><br>
+                                <a name="settingrecaplist"><h4>Setting recap list</h4></a>
+                                As you can see from the message in this window to start recaping you should
+                                specify the word list. Switch back to the <code>Program manager</code> window
+                                and press <code>Set for recap</code> button (<a href="#viewrecapwordslist">?</a>).<br>
+                                The <code>Recap</code> window will start periodically display the words from 
+                                the list: firstly definition, secondly translation and then 
+                                example of usage if it exists.<br>
+                                <img src="images/en/wordsrecaping.jpg"><br><br>
+                                <a name="recapsettings"><h4>Setting recap settings</h4></a>
+                                You can specify desirable intervals for definition, translation 
+                                and example displaying. Open <code>Recap manager</code> tab in <code>Program manager</code>
+                                window:<br>
+                                <img src="images/en/recapmanager.jpg"><br><br>
+                                Here you can choose display periods for each of these items.<br>
+                                If you want to recap the words in reverse order (translation appears
+                                before definition) - set <code>Show definition and translation in reverse
+                                order</code> checkbox. If you want to display words in random order you can
+                                do it here as well.<br>
+                                <a name="export"><h4>Exporting recap list to a file</h4></a>
+                                The <code>Program manager</code> allows to export currently recaping word list
+                                to file (for printing). To do this switch to the <code>Words manager</code> tab
+                                of the <code>Program manager</code> and press <code>Export list...</code> (<a href="#viewrecapwordslist">?</a>).<br>
+                                Note, that the <code>Export list...</code> button is enabled only if recap list is set (<a href="#settingrecaplist">?</a>).
+                                Press this button and enter a file name where you want to save word list to:<br>
+                                <img src="images/en/exportlist.jpg"><br><br>
+                                After the export operation completed you will get a notification message
+                                near the system tray area:<br>
+                                <img src="images/en/exportsuccess.jpg"><br><br>
+                                Now you can open this file, print it and hang it on the toilet door.<br>
+								<br><br>
+                                <a name="lookandfeel"><h4>Setting up look and feel</h4></a>
+                                The program is cross-platform thus the interface will slightly differ
+                                between platforms. You can also choose the look and feel which you like
+                                more. Open <code>Program manager</code> tab in <code>Program manager</code> window. Here you
+                                can specify desirable <code>Look and feel mode</code> from the available modes:<br>
+                                <img src="images/en/availablelafs.jpg"><br><br>
+                                Some of them are cross-platform (for example Metal), some only for
+                                Windows (Windows, Windows classic). The list of available modes will
+                                differ between platforms.
+</div>
+		</td>
+	</tr>
+	<tr class="footer">
+		<td colspan="2" align="center"><a href="http://www.linkedin.com/in/alexeypeskov">Alexey Peskov</a>, 2007-2009</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

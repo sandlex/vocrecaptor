@@ -1,0 +1,113 @@
+28.08.2009
+- www: new web site
+- www: project cleared on google code
+- web: upload in general to server
+- web: upload of large file plus error message
+- fx: all dictionaries comes to exercises instead of just one
+- web: invite code for registration
+- web: dictionaries table icons, header and styling
+- web: delete all languages from Vocrecaptor user space
++ released gae www
+
+31.08.2009
+- fx: encoding
++ released gae
+- www: sample dictionaries are encoded into utf8
+- web: delete dictionary
+
+01.09.2009
+- www: fixed broken dictionaries
+- swing: changed tray icon and version hint
+- www: Added page <a href="downloads.html">All downloads</a>
+- www: Added page <a href="updates.html">All updates</a>
++ released www
+- web: anonymous login and loading public dictionaries
+- www: Translated into Russian
++ released gae
+- web: uploaded sample dictionaries as public vocrecaptor dicts
+
+02.09.2009
+- fx: tenners in exercises
++ released gae
+- www, web: webstart image
+- www: usecases, exercises usage
++ released www
+- fx: version number
+
+03.09.2009
+- www: description and screenshots of exercises login, account panel
++ released www
+- fx: anonymous panel/login and funcionality
++ released gae
+- www: usecase scheme translated into russian
++ released www
+- www: removed separate web.html and changed links to appspot in main menu
+- web: changed design in vocrecaptor.com style, changed menu and user menu
++ released www gae
+
+04.09.2009
+- web: main menu styles
++ released gae
+
+08.09.2009
+- fx: changed Blob to Text and fixed encoding
+- fx: removed code from registration panel
++ released gae v1.0.0 (was v1.0.0 alpha)
+- web: dictionary preview
++ released gae v1.2.1
+- added statistics via google analytics
++ released gae www
+
+Editor v1.2.1
+Exercises v1.0.0
+Web v1.2.1
+
+09.09.2009
+- web: download dictionary
+- web: description is mandatory field for uploaded dictionary (since it is used for downloadable file name)
+- web: dictionary preview added legend "1 - 15 from 627" about words number
+- web: added loading indicator on dictionary preview page when user switches pages
+- web: added update dictionary form
+- web: implemented replacing update
+
+10.09.2009
+- web: implemented appending update
+- web: implemented merging update
+- web: added public dictionaries to the start page for download
+- web: changed user menu: placed under main menu, added flag menu for future localization
++ released gae www
+
+Editor v1.2.1
+Exercises v1.0.0
+Web v1.3.1
+
+11.09.2009
+- fx: removed recap functionality
+- fx: all windows made an equal size and template
+
+18.09.2009
+- fx: переход на javafx 1.2 и могучий рефакторинг Exercises - not completed (see vocrecaptor18092009 (fx1.2 transition).zip for temporary version)
+
+21.09.2009
+- fx: refactoring with javafx 1.1
+- fx: notification message style changed
+
+07.10.2009
+- www: tooltip mistake fixed - Java 2 Standard Edition (index, index_ru, downloads, downloads_ru)
+- Editor: Vocrecaptor included into frames title
+- Editor: clear fields after "Do not submit" button pressed
+- web: statistics area deleted
+- fx: reload categories and sessions on backing from exercises
+- fx: filtration on category and session
+
++ released web: v1.3.2
++ released fx: v1.1.0
++ released Editor: v1.2.2
++ released www updated
+
+08.10.2009
+- fx: if user didn't press Remember button the word will be displayed until he presses Next >> button. This allow to remember it better.
+- fx: writing hotkeys enter and f1
+
++ released fx: v1.2.0
++ released www updated

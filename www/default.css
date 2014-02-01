@@ -1,0 +1,106 @@
+#editor_download {
+	position: relative;
+	float: left;
+	width: 300px;
+}
+
+#editor_content {
+	position: relative;
+	float: left;
+	width: 530px;
+}
+
+.pages {
+	position: relative;
+	float: left;
+}
+
+.flags {
+	position: relative;
+	float: right;
+}
+
+a:link {
+	color: #3366CC;
+}
+
+body {
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 12px;
+}
+
+table {
+	text-align: left;
+}
+
+a:visited {
+	color: #4169E1;
+}
+
+a:active {
+	color: #0000CD;
+}
+
+a:hover {
+	color: #0000CD;
+}
+
+a:chap {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.topmenu {
+	background-color: #3b5998;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.topmenu a {
+	color: white;
+}
+
+.topmenu td {
+	padding: 5px;
+}
+
+.footer {
+	background-color: #3b5998;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.footer a {
+	color: white;
+}
+
+.footer td {
+	padding: 5px;
+}
+
+.download_jar {
+	width: 67px;
+	margin: auto;
+	background-color: #3b5998;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.download_jar a {
+	color: white;
+}
+
+.external a {
+	color: gray;
+}
+
+.update {
+	font-weight: bolder;
+}

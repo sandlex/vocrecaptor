@@ -1,0 +1,189 @@
+/*. - class
+# - id*/
+
+body {
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 12px;
+}
+
+a:link {
+	color: #3366CC;
+}
+
+a:visited {
+	color: #4169E1;
+}
+
+a:active {
+	color: #0000CD;
+}
+
+a:hover {
+	color: #0000CD;
+}
+
+.selected {
+	color: #3366CC;
+	text-decoration: underline;
+}
+
+img {
+	border: none;
+}
+
+table {
+	text-align: left;
+}
+
+/*TABLE {
+	TEXT-INDENT: 0px;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 9pt;
+	COLOR: #000000;
+	LINE-HEIGHT: normal;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+	TEXT-ALIGN: justify;
+}*/
+
+/*P {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 9pt;
+	COLOR: #000000;
+	TEXT-INDENT: 20px;
+	LINE-HEIGHT: normal;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+	TEXT-ALIGN: justify
+}*/
+
+.large_input_valid {
+	font-size: 24pt;
+	width: 400px;
+	height: 45px;
+	color: gray;
+	background-color: white;
+	margin-bottom: 10
+}
+
+.large_input_invalid {
+	font-size: 24pt;
+	width: 400px;
+	height: 45px;
+	color: gray;
+	background-color: red;
+	margin-bottom: 10;
+}
+
+.handy {
+	cursor: pointer;
+}
+
+.spacered {
+	margin-right: 10;
+}
+
+.voc-gwt-DialogBox {
+	border: 1px solid #3b5998;
+	/*padding: 4px 4px 4px 8px;*/
+	background: white;
+}
+
+.voc-gwt-DialogBox .Caption {
+	background: #3b5998 repeat-x 0px -2003px;
+	padding: 4px 4px 4px 8px;
+	cursor: default;
+	border-bottom: 1px solid #bbbbbb;
+	color: white;
+}
+
+.voc-gwt-DialogBox .dialogContent {
+	padding: 10px 10px 10px 10px;
+}
+
+.centralPart {
+	border-spacing: 0px;
+	border: solid 1px #3366CC;
+}
+
+.voc-gwt-Table {
+	border: 1px solid gray;
+	margin-bottom: 10;
+	margin-top: 10;
+	padding: 5px 5px 5px 5px;
+}
+
+.voc-gwt-Table td {
+	white-space: nowrap;
+}
+
+.voc-gwt-Table-header {
+	background: #3b5998;
+	color: white;
+}
+
+.flags {
+	position: relative;
+	float: right;
+}
+
+.pages {
+	position: relative;
+	float: left;
+}
+
+a:chap {
+	text-decoration: none;
+}
+
+.topmenu {
+	background-color: #3b5998;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.topmenu a, .topmenu a:visited, .topmenu a:active, .topmenu a:hover, .topmenu a:link {
+	color: white;
+}
+
+.topmenu td {
+	padding-left: 5px;
+	padding-bottom: 1px;
+}
+
+.footer {
+	background-color: #3b5998;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+}
+
+.footer a, .footer a:visited, .footer a:active, .footer a:hover, .footer a:link {
+	color: white;
+}
+
+.footer td {
+	padding: 5px;
+}
+
+.external a, .external a:visited, .external a:active, .external a:hover, .external a:link {
+	color: gray;
+}
+
+.usermenu {
+	background-color: #3b5998;
+	color: white;
+	position: relative;
+	float: left;
+	height: 19px;	
+}
+
+.usermenu a, .usermenu a:visited, .usermenu a:active, .usermenu a:hover, .usermenu a:link {
+	color: white;
+}
+
+.usermenu td {
+	padding-left: 5px;
+	padding-bottom: 1px;
+}
