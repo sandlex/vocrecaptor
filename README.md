@@ -1,9 +1,9 @@
 ##What is Vocrecaptor?
 
-![usecase](https://raw2.github.com/sandlex/vocrecaptor/master/images/usecase/usecase.jpg)
+![usecase](https://github.com/sandlex/vocrecaptor/blob/master/images/usecase/usecase.jpg)
 
 
-[larger](https://raw2.github.com/sandlex/vocrecaptor/master/images/usecase/usecasehorizontal.jpg)
+[larger](https://github.com/sandlex/vocrecaptor/blob/master/images/usecase/usecasehorizontal.jpg)
 
 Project Vocrecaptor includes several applications and services serving the common purpose - provide a help in learning foreign languages by improving a vocabulary. Currently projects consists of 3 sub-projects:
  * Vocrecaptor Editor
