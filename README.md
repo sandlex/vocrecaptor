@@ -31,12 +31,12 @@ Vocrecaptor Exercises is a JavaFX application that allows you to do exercises on
 
 [Working with Vocrecaptor Exercises](https://github.com/sandlex/vocrecaptor/blob/master/Exercises.wiki)
 
-[![applet](https://raw2.github.com/sandlex/vocrecaptor/master/images/launchapplet.jpg)](http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.html)
+[![applet](https://github.com/sandlex/vocrecaptor/blob/master/images/launchapplet.jpg)](http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.html)
 
-[![application](https://raw2.github.com/sandlex/vocrecaptor/master/images/launchapplication.jpg)](http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.jnlp)
+[![application](https://github.com/sandlex/vocrecaptor/blob/master/images/launchapplication.jpg)](http://vocrecaptor.appspot.com/exercises/Vocrecaptorexercises.jnlp)
 
 #Vocrecaptor is created using
-![java](https://raw2.github.com/sandlex/vocrecaptor/master/images/java.jpg)
-![javafx](https://raw2.github.com/sandlex/vocrecaptor/master/images/javafx.jpg)
-![gwt](https://raw2.github.com/sandlex/vocrecaptor/master/images/gwt.jpg)
-![gae](https://raw2.github.com/sandlex/vocrecaptor/master/images/gae.jpg)
+![java](https://github.com/sandlex/vocrecaptor/blob/master/images/java.jpg)
+![javafx](https://github.com/sandlex/vocrecaptor/blob/master/images/javafx.jpg)
+![gwt](https://github.com/sandlex/vocrecaptor/blob/master/images/gwt.jpg)
+![gae](https://github.com/sandlex/vocrecaptor/blob/master/images/gae.jpg)
