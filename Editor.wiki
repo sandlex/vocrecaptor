@@ -21,10 +21,10 @@ Let's assume you are reading a book on a language you are studying (for example 
 
 ===Starting Vocrecaptor Editor===
 To run the Vocrecaptor from the command line, go to the dist folder and type the following: `java -jar "vocrecaptoreditor-v1.2.1.jar"` where v1.2.1 is the current version number. You can also execute the program by double clicking on the jar-file. The program icon will appear in a system tray:<br>
-[systemtray](https://github.com/sandlex/vocrecaptor/blob/master/images/editor/systemtray.jpg)
+![systemtray](https://github.com/sandlex/vocrecaptor/blob/master/images/editor/systemtray.jpg)
 <br><br>
 After a double click on the icon the `Program manager` window will appear:<br>
-[](https://github.com/sandlex/vocrecaptor/blob/master/images/editor/programmanager_wordsmanager.jpg)
+![](https://github.com/sandlex/vocrecaptor/blob/master/images/editor/programmanager_wordsmanager.jpg)
 <br><br>
 ===Opening an existing storage===
 To open existing dictionary press `...` button and choose a dictionary file. If a format of the specified file is incorrect the message will appear:<br>
